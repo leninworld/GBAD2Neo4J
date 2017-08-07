@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cc6297eb-0849-4ae3-959b-50475b2d6b98" name="Default" comment="" />
+    <list default="true" id="cc6297eb-0849-4ae3-959b-50475b2d6b98" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/Convert_GBAD_2_Neo3J_Cypher.scala" afterPath="$PROJECT_DIR$/src/main/scala/Convert_GBAD_2_Neo3J_Cypher.scala" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -23,8 +27,8 @@
       <file leaf-file-name="Convert_GBAD_2_Neo3J_Cypher.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/Convert_GBAD_2_Neo3J_Cypher.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="4" column="8" lean-forward="true" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+            <state relative-caret-position="165">
+              <caret line="11" column="33" lean-forward="false" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
               <folding>
                 <element signature="e#1#23#0" expanded="true" />
               </folding>
@@ -317,12 +321,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1502073248710</updated>
-      <workItem from="1502073251867" duration="1610000" />
+      <workItem from="1502073251867" duration="2234000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1610000" />
+    <option name="totallyTimeSpent" value="2234000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="12" y="23" width="1823" height="991" extended-state="0" />
@@ -373,8 +377,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/scala/Convert_GBAD_2_Neo3J_Cypher.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="4" column="8" lean-forward="true" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+        <state relative-caret-position="165">
+          <caret line="11" column="33" lean-forward="false" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
           <folding>
             <element signature="e#1#23#0" expanded="true" />
           </folding>

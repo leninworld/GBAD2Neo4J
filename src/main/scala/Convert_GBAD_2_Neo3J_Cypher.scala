@@ -7,6 +7,11 @@ import java.io.{FileNotFoundException, IOException}
 //  def helloWorld() { println("hey") }
 //}
 
+/*
+*   Author: Lenin Mookiah
+*   Email : lenin.world@gmail.com
+* */
+
 // OBJECT
 object Convert_GBAD_2_Neo3J_Cypher extends App  {
 
