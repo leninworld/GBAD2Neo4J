@@ -10,6 +10,7 @@ import java.io.{FileNotFoundException, IOException}
 /*
 *   Author: Lenin Mookiah
 *   Email : lenin.world@gmail.com
+*   Description: 
 * */
 
 // OBJECT
@@ -26,7 +27,7 @@ object Convert_GBAD_2_Neo3J_Cypher extends App  {
 
           var arr = line.split("\\s+")
 
-           println("atom. "+arr.length +" "+arr(0) + " "+arr(1)+" "+arr(2))
+          println("atom. "+arr.length +" "+arr(0) + " "+arr(1)+" "+arr(2))
 
       }
 
