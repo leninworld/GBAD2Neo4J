@@ -8,7 +8,7 @@ import scala.util.Try
 /*
 *   Author      : Lenin Mookiah
 *   Email       : lenin.world@gmail.com
-*   Description : Convert GBAD graph file into CYPHER scripts that can create nodes and relationships when can be run in Neo4J database.
+*   Description : Convert GBAD graph file into CYPHER scripts that can create nodes and relationships when can be run in Neo4J graph database.
 * */
 
 object Convert_GBAD_2_Neo3J_Cypher extends App  {
