@@ -151,6 +151,10 @@ object Convert_GBAD_2_Neo3J_Cypher extends App  {
       writer.append(","+currCSQLstatement)
       writer.flush()
 
+      // run cypher
+      // ./cypher-shell -u neo4j -p teresa143 "call apoc.cypher.runFile('/Users/lenin/Dropbox/C995_only/C995_OUTPUT_3_output.cql')"
+
+
     } catch {
       case ex: IllegalArgumentException => print(ex +  ex.getMessage)
     }
