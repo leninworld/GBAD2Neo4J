@@ -23,8 +23,8 @@ The cql file can be imported to neo4j using cypher-shell as shown in next step.
 
 3) Take the <outputFile>.cql file from baseFolder and run it using cypher-shell
 
-Example:
-./cypher-shell -u username -p password "call apoc.cypher.runFile('/pathToOutputFile/outputFile.cql')"
+   Example:
+   ./cypher-shell -u username -p password "call apoc.cypher.runFile('/pathToOutputFile/outputFile.cql')"
 
 <b>Sample:</b> Sample GBAD graph file format for a triangle that has three nodes named "Integrity", "Intelligent", and "Energy"
 and edges with label "with" among them (see file "triangle.g" under src/data):
