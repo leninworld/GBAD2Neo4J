@@ -153,16 +153,16 @@ object Convert_GBAD_2_Neo3J_Cypher extends App  {
       // last relationship exists in the file
       println("last counterForXP:" + counterForXP +   " arrVertexIDandName.size:"+arrVertexIDandName.size)
 
-      currCSQLstatement = createNodesAndEdges(counterForXP,
-                                              currSourceNode,
-                                              currDestinationNode,
-                                              currEdge,
-                                              arrVertexIDandName,
-                                              currSourceNodeNameInteger,
-                                              currDestinationNodeNameInteger )
-
-      writer.append(currCSQLstatement)
-      writer.flush()
+//      currCSQLstatement = createNodesAndEdges(counterForXP,
+//                                              currSourceNode,
+//                                              currDestinationNode,
+//                                              currEdge,
+//                                              arrVertexIDandName,
+//                                              currSourceNodeNameInteger,
+//                                              currDestinationNodeNameInteger )
+//
+//      writer.append(currCSQLstatement)
+//      writer.flush()
 
       // run cypher
       // ./cypher-shell -u neo4j -p teresa143 "call apoc.cypher.runFile('/Users/lenin/Dropbox/C995_only/C995_OUTPUT_3_output.cql')"
@@ -174,12 +174,12 @@ object Convert_GBAD_2_Neo3J_Cypher extends App  {
   }
 
   // change baseFolder name here
-  val baseFolder = "/Users/lenin/GBAD2Neo4J/src/data/"
+  val baseFolder = "/Users/lenin/Dropbox/GBAD2Neo4J/src/data/"
   // change input file name here
-  var inputFilename   = "sample1.g"
+  var inputFilename   = "triangle.g"
   inputFilename   = baseFolder + inputFilename
   // change output file name here
-  var outputFilename   = "sample1_out.cql"
+  var outputFilename   = "triangle_out.cql"
   outputFilename   = baseFolder + outputFilename
 
   // convert GBAD to Neo4J
