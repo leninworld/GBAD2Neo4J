@@ -29,31 +29,41 @@ object Convert_GBAD_2_Neo3J_Cypher extends App  {
       //  ----------------------------------------------------------------------------
       //  create (n1:XP1 {name:"Krishna" })-[:HELLO]->(n2:XP1 {name:"Arjun"}),
       //         (n3:XP1 {name:"Ceasor"})-[:BYE]->(n4:XP1 {name:"Lenin"});
-      //
-      //      CREATE (n2892:XP60 {name:15})-[:has]->(n2893:XP60 {name:24});
+      //  ----------------------------------------------------------------------------
+      //  // Creating triangle
+      //  ----------------------------------------------------------------------------
+      //      CREATE (n1:XP1 {id:"1XP1", name:"A"});
+      //      CREATE (n2:XP1 {id:"2XP1", name:"B"});
+      //      CREATE (n3:XP1 {id:"3XP1", name:"C"});
+      //      MATCH (n1:XP1 {id:"1XP1"}),(n2:XP1 {id:"2XP1"}) CREATE (n1)-[:has]->(n2);
+      //      MATCH (n1:XP1 {id:"2XP1"}),(n2:XP1 {id:"3XP1"}) CREATE (n1)-[:has]->(n2);
+      //      MATCH (n1:XP1 {id:"3XP1"}),(n2:XP1 {id:"1XP1"}) CREATE (n1)-[:has]->(n2);
       //  ----------------------------------------------------------------------------
       var newEdge = ""
       var isInteger = Try(currEdge.toInt).isSuccess
       // This will be considered as float or double, and hence numeric
-      if(currEdge.indexOf(".") >=0 ){
+      if(currEdge.indexOf(".") >= 0 ){
         newEdge = currEdge.replace(".","dot")
       }
       else if(isInteger==true){ //check if its integer value
-
         //        println("isInteger:"+isInteger+" "+currEdge)
         if(isInteger){
           newEdge = "label {val:" + currEdge + "}"
         }
       }
       else{
-        newEdge = currEdge
+          newEdge = currEdge
       }
 
-      //      var outString: String = "(n" + currSourceNodeNameInteger + ":XP" + counterForXP + " {name:" + currSourceNode + "})-[:" + newEdge + "]->(n" + currDestinationNodeNameInteger+
-      //                                  ":XP"+counterForXP + " {name:"+ currDestinationNode + "})"
+      var xpStringSource = currSourceNode + "XP" +counterForXP
+      var xpStringDestination = currDestinationNode + "XP" +counterForXP
 
-      var outString: String = "(n" + currSourceNode + ":XP" + counterForXP + " {name:" + currSourceNode + "})-[:" + newEdge + "]->(n" + currDestinationNode+
-        ":XP"+counterForXP + " {name:"+ currDestinationNode + "})"
+//      var outString: String = "(n" + currSourceNode + ":XP" + counterForXP + " {name:" + currSourceNode + "})-[:" + newEdge + "]->(n" + currDestinationNode+
+//                              ":XP"+counterForXP + " {name:"+ currDestinationNode + "})"
+      var outString: String = s"""MATCH (n1:XP$counterForXP {id:"$xpStringSource"}),(n2:XP$counterForXP {id:"$xpStringDestination"}) CREATE (n1)-[:$newEdge]->(n2);\n"""
+
+      println(outString+"<---")
+
 
       return outString
     } catch {
@@ -84,8 +94,6 @@ object Convert_GBAD_2_Neo3J_Cypher extends App  {
       var currDestinationNodeNameInteger :Integer = 0
       var conccurrCSQLstatement = ""
 
-      writer.append("CREATE ")
-
       // read each line
       for (line <- Source.fromFile(inFile).getLines) {
         //
@@ -97,17 +105,27 @@ object Convert_GBAD_2_Neo3J_Cypher extends App  {
         }
         var arr = line.split("\\s+")
         //          arrVertexIDandName = new scala.collection.mutable.ArrayBuffer[String]()
-        //
+
+        // vertex
         if( arr.length == 3  && line.indexOf("XP # ") == -1 && line.indexOf("v ") >= 0 ) {
           currVertexID = Integer.valueOf(arr(1))
           var currVertexName = arr(2)
-          currVertexName = currVertexName.replaceAll("\"","")
-          arrVertexIDandName += currVertexName
+              currVertexName = currVertexName.replaceAll("\"","")
+              arrVertexIDandName += currVertexName
+
+              if(currVertexName.indexOf("val=") >=0 )
+                currVertexName = currVertexName.substring(currVertexName.indexOf("val=")+4, currVertexName.length())
+              else
+                currVertexName = currVertexName.substring(currVertexName.indexOf("idx:")+4, currVertexName.length())
+
+              //create nodes
+              writer.append("CREATE (n1:XP"+counterForXP+" {id:\""+currVertexID+"XP"+counterForXP+"\", name:\""+currVertexName+"\"});\n")
+              writer.flush()
 
           //            println("vertexID:" + currVertexID + " vertexName:" + currVertexName.replaceAll("\"","")
           //                    +" "+arrVertexIDandName.size+" arrVertexIDandName(0):"+ arrVertexIDandName(0) )
         }
-        //
+        // edge relationships between pair of nodes
         if(arr.length == 4) {
           currSourceNode = arr(1)
           currDestinationNode = arr(2)
@@ -118,37 +136,42 @@ object Convert_GBAD_2_Neo3J_Cypher extends App  {
           currSourceNodeNameInteger += 1
           currDestinationNodeNameInteger = currSourceNodeNameInteger + 1
 
-          // Create nodes and edges
+          // Create nodes and edges from relationship between two nodes
           currCSQLstatement = createNodesAndEdges(counterForXP,
-            currSourceNode,
-            currDestinationNode,
-            currEdge,
-            arrVertexIDandName,
-            currSourceNodeNameInteger,
-            currDestinationNodeNameInteger
-          )
+                                                  currSourceNode,
+                                                  currDestinationNode,
+                                                  currEdge,
+                                                  arrVertexIDandName,
+                                                  currSourceNodeNameInteger,
+                                                  currDestinationNodeNameInteger
+                                                )
           println(currCSQLstatement)
 
-          if(conccurrCSQLstatement.length() == 0) {
-            conccurrCSQLstatement = currCSQLstatement
+//          if(conccurrCSQLstatement.length() == 0) {
+//            conccurrCSQLstatement = currCSQLstatement
             writer.append(currCSQLstatement)
-          }
-          else {
-            conccurrCSQLstatement += "," + currCSQLstatement
-            writer.append(","+currCSQLstatement)
-          }
+//          }
+//          else {
+//            conccurrCSQLstatement += "," + currCSQLstatement
+//            writer.append(","+currCSQLstatement)
+//          }
           writer.flush()
 
         }
       }
 
-      // last one
+      // last relationship exists in the file
       println("last counterForXP:" + counterForXP +   " arrVertexIDandName.size:"+arrVertexIDandName.size)
 
-      currCSQLstatement = createNodesAndEdges(counterForXP, currSourceNode, currDestinationNode,
-        currEdge, arrVertexIDandName, currSourceNodeNameInteger, currDestinationNodeNameInteger )
+      currCSQLstatement = createNodesAndEdges(counterForXP,
+                                              currSourceNode,
+                                              currDestinationNode,
+                                              currEdge,
+                                              arrVertexIDandName,
+                                              currSourceNodeNameInteger,
+                                              currDestinationNodeNameInteger )
 
-      writer.append(","+currCSQLstatement)
+      writer.append(currCSQLstatement)
       writer.flush()
 
       // run cypher
@@ -161,12 +184,12 @@ object Convert_GBAD_2_Neo3J_Cypher extends App  {
   }
 
   // change baseFolder name here
-  val baseFolder = "/Users/lenin/Dropbox/#problems/p19/C995_only/"
+  val baseFolder = "/Users/lenin/#problems/p19/C995_only/"
   // change input file name here
   var inputFilename   = "C995_OUTPUT_3.g"
   inputFilename   = baseFolder + inputFilename
   // change output file name here
-  var outputFilename   = "C995_OUTPUT_3_output.csql"
+  var outputFilename   = "C995_OUTPUT_3_output.cql"
   outputFilename   = baseFolder + outputFilename
 
   // convert GBAD to Neo4J
