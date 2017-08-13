@@ -174,7 +174,7 @@ object Convert_GBAD_2_Neo3J_Cypher extends App  {
   }
 
   // change baseFolder name here
-  val baseFolder = "/Users/lenin/Dropbox/GBAD2Neo4J/src/data/"
+  val baseFolder = "/Users/lenin/GBAD2Neo4J/src/data/"
   // change input file name here
   var inputFilename   = "sample1.g"
   inputFilename   = baseFolder + inputFilename
