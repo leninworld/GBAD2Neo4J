@@ -36,11 +36,11 @@ object Convert_GBAD_2_Neo3J_Cypher extends App  {
       var isInteger = Try(currEdge.toInt).isSuccess
       // This will be considered as float or double, and hence numeric
       if(currEdge.indexOf(".") >=0 ){
-          newEdge = currEdge.replace(".","dot")
+        newEdge = currEdge.replace(".","dot")
       }
       else if(isInteger==true){ //check if its integer value
 
-//        println("isInteger:"+isInteger+" "+currEdge)
+        //        println("isInteger:"+isInteger+" "+currEdge)
         if(isInteger){
           newEdge = "label {val:" + currEdge + "}"
         }
@@ -49,8 +49,8 @@ object Convert_GBAD_2_Neo3J_Cypher extends App  {
         newEdge = currEdge
       }
 
-//      var outString: String = "(n" + currSourceNodeNameInteger + ":XP" + counterForXP + " {name:" + currSourceNode + "})-[:" + newEdge + "]->(n" + currDestinationNodeNameInteger+
-//                                  ":XP"+counterForXP + " {name:"+ currDestinationNode + "})"
+      //      var outString: String = "(n" + currSourceNodeNameInteger + ":XP" + counterForXP + " {name:" + currSourceNode + "})-[:" + newEdge + "]->(n" + currDestinationNodeNameInteger+
+      //                                  ":XP"+counterForXP + " {name:"+ currDestinationNode + "})"
 
       var outString: String = "(n" + currSourceNode + ":XP" + counterForXP + " {name:" + currSourceNode + "})-[:" + newEdge + "]->(n" + currDestinationNode+
         ":XP"+counterForXP + " {name:"+ currDestinationNode + "})"
@@ -58,7 +58,7 @@ object Convert_GBAD_2_Neo3J_Cypher extends App  {
       return outString
     } catch {
       case ex: IllegalArgumentException => print(ex +  ex.getMessage)
-      return ""
+        return ""
     }
     return ""
   }
@@ -82,58 +82,74 @@ object Convert_GBAD_2_Neo3J_Cypher extends App  {
       var currVertexID :Integer = 0
       var currSourceNodeNameInteger :Integer = 0
       var currDestinationNodeNameInteger :Integer = 0
+      var conccurrCSQLstatement = ""
+
+      writer.append("CREATE ")
+
       // read each line
       for (line <- Source.fromFile(inFile).getLines) {
-          //
-          if(line.indexOf("XP # ") >= 0) {
-//            println("counterForXP:" + counterForXP +   " arrVertexIDandName.size:"+arrVertexIDandName.size)
+        //
+        if(line.indexOf("XP # ") >= 0) {
+          //            println("counterForXP:" + counterForXP +   " arrVertexIDandName.size:"+arrVertexIDandName.size)
 
-            counterForXP += 1
-            arrVertexIDandName = new scala.collection.mutable.ArrayBuffer[String]()
+          counterForXP += 1
+          arrVertexIDandName = new scala.collection.mutable.ArrayBuffer[String]()
+        }
+        var arr = line.split("\\s+")
+        //          arrVertexIDandName = new scala.collection.mutable.ArrayBuffer[String]()
+        //
+        if( arr.length == 3  && line.indexOf("XP # ") == -1 && line.indexOf("v ") >= 0 ) {
+          currVertexID = Integer.valueOf(arr(1))
+          var currVertexName = arr(2)
+          currVertexName = currVertexName.replaceAll("\"","")
+          arrVertexIDandName += currVertexName
+
+          //            println("vertexID:" + currVertexID + " vertexName:" + currVertexName.replaceAll("\"","")
+          //                    +" "+arrVertexIDandName.size+" arrVertexIDandName(0):"+ arrVertexIDandName(0) )
+        }
+        //
+        if(arr.length == 4) {
+          currSourceNode = arr(1)
+          currDestinationNode = arr(2)
+          currEdge = arr(3)
+          currEdge = currEdge.replaceAll("\"","").replace("(","").replace(")","")
+
+          //          println("atom. directed?:" + currSourceNode + " " +currDestinationNode)
+          currSourceNodeNameInteger += 1
+          currDestinationNodeNameInteger = currSourceNodeNameInteger + 1
+
+          // Create nodes and edges
+          currCSQLstatement = createNodesAndEdges(counterForXP,
+            currSourceNode,
+            currDestinationNode,
+            currEdge,
+            arrVertexIDandName,
+            currSourceNodeNameInteger,
+            currDestinationNodeNameInteger
+          )
+          println(currCSQLstatement)
+
+          if(conccurrCSQLstatement.length() == 0) {
+            conccurrCSQLstatement = currCSQLstatement
+            writer.append(currCSQLstatement)
           }
-          var arr = line.split("\\s+")
-//          arrVertexIDandName = new scala.collection.mutable.ArrayBuffer[String]()
-          //
-          if( arr.length == 3  && line.indexOf("XP # ") == -1 && line.indexOf("v ") >= 0 ) {
-            currVertexID = Integer.valueOf(arr(1))
-            var currVertexName = arr(2)
-                currVertexName = currVertexName.replaceAll("\"","")
-            arrVertexIDandName += currVertexName
-
-//            println("vertexID:" + currVertexID + " vertexName:" + currVertexName.replaceAll("\"","")
-//                    +" "+arrVertexIDandName.size+" arrVertexIDandName(0):"+ arrVertexIDandName(0) )
+          else {
+            conccurrCSQLstatement += "," + currCSQLstatement
+            writer.append(","+currCSQLstatement)
           }
-          //
-          if(arr.length == 4) {
-            currSourceNode = arr(1)
-            currDestinationNode = arr(2)
-            currEdge = arr(3)
-            currEdge = currEdge.replaceAll("\"","").replace("(","").replace(")","")
+          writer.flush()
 
-//          println("atom. directed?:" + currSourceNode + " " +currDestinationNode)
-            currSourceNodeNameInteger += 1
-            currDestinationNodeNameInteger = currSourceNodeNameInteger + 1
-
-            // Create nodes and edges
-            currCSQLstatement = createNodesAndEdges(counterForXP,
-                                                    currSourceNode,
-                                                    currDestinationNode,
-                                                    currEdge,
-                                                    arrVertexIDandName,
-                                                    currSourceNodeNameInteger,
-                                                    currDestinationNodeNameInteger
-                                                    )
-            println(currCSQLstatement)
-
-          }
+        }
       }
 
       // last one
       println("last counterForXP:" + counterForXP +   " arrVertexIDandName.size:"+arrVertexIDandName.size)
 
       currCSQLstatement = createNodesAndEdges(counterForXP, currSourceNode, currDestinationNode,
-                                              currEdge, arrVertexIDandName, currSourceNodeNameInteger, currDestinationNodeNameInteger )
+        currEdge, arrVertexIDandName, currSourceNodeNameInteger, currDestinationNodeNameInteger )
 
+      writer.append(","+currCSQLstatement)
+      writer.flush()
 
     } catch {
       case ex: IllegalArgumentException => print(ex +  ex.getMessage)
@@ -144,10 +160,10 @@ object Convert_GBAD_2_Neo3J_Cypher extends App  {
   val baseFolder = "/Users/lenin/Dropbox/#problems/p19/C995_only/"
   // change input file name here
   var inputFilename   = "C995_OUTPUT_3.g"
-      inputFilename   = baseFolder + inputFilename
+  inputFilename   = baseFolder + inputFilename
   // change output file name here
   var outputFilename   = "C995_OUTPUT_3_output.csql"
-      outputFilename   = baseFolder + outputFilename
+  outputFilename   = baseFolder + outputFilename
 
   // convert GBAD to Neo4J
   Convert_GBAD_2_Neo3J_Cypherfn(inputFilename, outputFilename)
