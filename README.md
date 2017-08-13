@@ -3,17 +3,27 @@
 <b>Purpose:</b>
 Convert GBAD formatted graph files into Neo4J graph cql files.
 
-<b>Input:</b> GBAD formatted graph file.
 
+<b>Introduction to GBAD:</b>
+GBAD is a tool developed by Dr. William (Bill) Eberle from Tennessee Tech University. It takes graph input files and outputs anomalies (i.e., edges and vertices) found using minimum descriptive length approach. GBAD can be downloaded from [here](http://users.csc.tntech.edu/~weberle/gbad/download.html). Related paper using it can be found [here](http://ailab.wsu.edu/adgs/pdfs/MookiahVAST2014.pdf) and [here](http://www.aaai.org/ocs/index.php/FLAIRS/FLAIRS15/paper/download/10378/10281).
+
+<b>Prerequisite:</b>
+1) Neo4J installed and running.
+2) IntelliJ IDE or similar.
+
+<b>Steps:</b>
+1) Import this cloned project from github into IntelliJ.
+
+2) Run "Convert_GBAD_2_Neo3J_Cypher.scala" file after changing values for variables inputFilename , outputFilename , and baseFolder.
+
+<b>Input:</b> GBAD formatted graph file (see below for sample file ).
 <b>Output:</b> cql file which can used with cypher-shell to load the graphs into Neo4J graph database.
 The cql file can be imported to neo4j using cypher-shell as below shown example.
 
+3) Take the <outputFile>.cql file from baseFolder and run it using cypher-shell
+
 Example:
-
 ./cypher-shell -u username -p password "call apoc.cypher.runFile('/pathToFile/fileName.cql')"
-
-<b>Introduction to GBAD:</b>
-GBAD is a tool developed by Dr. William (Bill) Eberle from Tennessee Tech University. It takes graph input files and outputs anomalies (i.e., edges and vertices) found using minimum descriptive length approach.
 
 <b>Sample:</b> Sample GBAD graph file format for a triangle that has three nodes named "Integrity", "Intelligent", and "Energy"
 and edges with label "with" among them (see file "triangle.g" under src/data):
