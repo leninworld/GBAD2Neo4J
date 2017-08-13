@@ -1,5 +1,11 @@
 # GBAD2Neo4J
-Convert GBAD format files into Neo4J graphs with cql
+
+<b>Purpose:</b>
+Convert GBAD formatted graph files into Neo4J graphs with cql.
+
+<b>Input:</b> GBAD formatted graph file.
+
+<b>Output:</b> cql file which can used with cypher-shell to load the graphs into Neo4J graph database.
 
 <b>Introduction to GBAD:</b>
 GBAD is a tool developed by Dr. William (Bill) Eberle at Tennessee Tech University. It takes graph input files and outputs anomalies (i.e., edges and vertices) found using minimum descriptive length approach.
