@@ -10,8 +10,8 @@ Convert GBAD formatted graph files into Neo4J graphs with cql.
 <b>Introduction to GBAD:</b>
 GBAD is a tool developed by Dr. William (Bill) Eberle at Tennessee Tech University. It takes graph input files and outputs anomalies (i.e., edges and vertices) found using minimum descriptive length approach.
 
-Sample GBAD graph file format for a triangle that has three nodes named "Integrity", "Intelligent", and "Energy"
-and create edges with label "with" among them (see file "triangle.g" under src/data):
+<b>Sample:</b> Sample GBAD graph file format for a triangle that has three nodes named "Integrity", "Intelligent", and "Energy"
+and edges with label "with" among them (see file "triangle.g" under src/data):
 
 XP # 1
 
