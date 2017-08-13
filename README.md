@@ -1,7 +1,7 @@
 # GBAD2Neo4J
 
 <b>Purpose:</b>
-Convert GBAD formatted graph files into Neo4J graphs with cql.
+Convert GBAD formatted graph files into Neo4J graph cql files.
 
 <b>Input:</b> GBAD formatted graph file.
 
