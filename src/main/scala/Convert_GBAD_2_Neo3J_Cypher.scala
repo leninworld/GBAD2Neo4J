@@ -58,12 +58,9 @@ object Convert_GBAD_2_Neo3J_Cypher extends App  {
       var xpStringSource = currSourceNode + "XP" +counterForXP
       var xpStringDestination = currDestinationNode + "XP" +counterForXP
 
-//      var outString: String = "(n" + currSourceNode + ":XP" + counterForXP + " {name:" + currSourceNode + "})-[:" + newEdge + "]->(n" + currDestinationNode+
-//                              ":XP"+counterForXP + " {name:"+ currDestinationNode + "})"
       var outString: String = s"""MATCH (n1:XP$counterForXP {id:"$xpStringSource"}),(n2:XP$counterForXP {id:"$xpStringDestination"}) CREATE (n1)-[:$newEdge]->(n2);\n"""
 
       println(outString+"<---")
-
 
       return outString
     } catch {
@@ -113,9 +110,9 @@ object Convert_GBAD_2_Neo3J_Cypher extends App  {
               currVertexName = currVertexName.replaceAll("\"","")
               arrVertexIDandName += currVertexName
 
-              if(currVertexName.indexOf("val=") >=0 )
+              if(currVertexName.indexOf("val=") >= 0 )
                 currVertexName = currVertexName.substring(currVertexName.indexOf("val=")+4, currVertexName.length())
-              else
+              else if(currVertexName.indexOf("idx:") >= 0)
                 currVertexName = currVertexName.substring(currVertexName.indexOf("idx:")+4, currVertexName.length())
 
               //create nodes
@@ -145,17 +142,10 @@ object Convert_GBAD_2_Neo3J_Cypher extends App  {
                                                   currSourceNodeNameInteger,
                                                   currDestinationNodeNameInteger
                                                 )
-          println(currCSQLstatement)
+            println(currCSQLstatement)
 
-//          if(conccurrCSQLstatement.length() == 0) {
-//            conccurrCSQLstatement = currCSQLstatement
             writer.append(currCSQLstatement)
-//          }
-//          else {
-//            conccurrCSQLstatement += "," + currCSQLstatement
-//            writer.append(","+currCSQLstatement)
-//          }
-          writer.flush()
+            writer.flush()
 
         }
       }
@@ -184,12 +174,12 @@ object Convert_GBAD_2_Neo3J_Cypher extends App  {
   }
 
   // change baseFolder name here
-  val baseFolder = "/Users/lenin/#problems/p19/C995_only/"
+  val baseFolder = "/Users/lenin/Dropbox/GBAD2Neo4J/src/data/"
   // change input file name here
-  var inputFilename   = "C995_OUTPUT_3.g"
+  var inputFilename   = "sample1.g"
   inputFilename   = baseFolder + inputFilename
   // change output file name here
-  var outputFilename   = "C995_OUTPUT_3_output.cql"
+  var outputFilename   = "sample1_out.cql"
   outputFilename   = baseFolder + outputFilename
 
   // convert GBAD to Neo4J
