@@ -44,4 +44,9 @@ d 2 3 "with"
 d 3 1 "with"
 
 
+Sample graph file generated is shown here below:
+![alt text](https://github.com/leninworld/GBAD2Neo4J/blob/master/src/images/sampleoutputGraph.png)
+
+
+
 
