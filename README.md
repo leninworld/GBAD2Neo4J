@@ -8,8 +8,8 @@ It takes graph input files and outputs anomalies found using minimum descriptive
 Sample GBAD graph file format for a triangle that has three nodes named "Integrity", "Intelligent", and "Energy"
 and create edges with label "with" among them:
 
-XP # 1\n
-v 1 "Integrity"\n
+XP # 1<br\>
+v 1 "Integrity"<br\>
 v 2 "Intelligent"\n
 v 3 "Energy"\n
 d 1 2 "with"
