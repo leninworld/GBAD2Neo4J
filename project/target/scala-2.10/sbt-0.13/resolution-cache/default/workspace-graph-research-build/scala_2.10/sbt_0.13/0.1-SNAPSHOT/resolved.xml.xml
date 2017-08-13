@@ -4,7 +4,7 @@
 		module="workspace-graph-research-build"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20170806213420"
+		publication="20170812190732"
 		e:sbtVersion="0.13" e:scalaVersion="2.10"
 	>
 		<description>
