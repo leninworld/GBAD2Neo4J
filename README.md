@@ -6,6 +6,11 @@ Convert GBAD formatted graph files into Neo4J graph cql files.
 <b>Input:</b> GBAD formatted graph file.
 
 <b>Output:</b> cql file which can used with cypher-shell to load the graphs into Neo4J graph database.
+The cql file can be imported to neo4j using cypher-shell as below shown example.
+
+Example:
+
+./cypher-shell -u username -p password "call apoc.cypher.runFile('/pathToFile/fileName.cql')"
 
 <b>Introduction to GBAD:</b>
 GBAD is a tool developed by Dr. William (Bill) Eberle at Tennessee Tech University. It takes graph input files and outputs anomalies (i.e., edges and vertices) found using minimum descriptive length approach.
