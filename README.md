@@ -5,7 +5,7 @@ Convert GBAD formatted graph files into Neo4J graph cql files.
 
 
 <b>Introduction to GBAD:</b>
-GBAD is a graph-based library developed by Dr. William (Bill) Eberle from Tennessee Tech University. It takes graph input files and outputs anomalies (i.e., edges and vertices) found using minimum descriptive length approach. GBAD can be downloaded from [here](http://users.csc.tntech.edu/~weberle/gbad/download.html). Related paper using it can be found [here](http://ailab.wsu.edu/adgs/pdfs/MookiahVAST2014.pdf) and [here](http://www.aaai.org/ocs/index.php/FLAIRS/FLAIRS15/paper/download/10378/10281).
+GBAD is a graph-based library developed by Dr. William (Bill) Eberle from Tennessee Tech University. It takes graph input files and outputs anomalies (i.e., edges and vertices) found using minimum descriptive length approach. GBAD can be downloaded from [here](http://users.csc.tntech.edu/~weberle/gbad/download.html). Related paper using this library can be found [here](http://ailab.wsu.edu/adgs/pdfs/MookiahVAST2014.pdf) and [here](http://www.aaai.org/ocs/index.php/FLAIRS/FLAIRS15/paper/download/10378/10281).
 
 <b>Prerequisite:</b>
 1) Neo4J installed and running.
@@ -16,9 +16,9 @@ GBAD is a graph-based library developed by Dr. William (Bill) Eberle from Tennes
 
 2) Run "Convert_GBAD_2_Neo3J_Cypher.scala" file after changing values for variables inputFilename , outputFilename , and baseFolder.
 
-<b>Input:</b> GBAD formatted graph file (read further below for sample file examples).
+      <b>Input:</b> GBAD formatted graph file (read further below for sample file examples).
 
-<b>Output:</b> cql file which can used with cypher-shell to load the graphs into Neo4J graph database.
+      <b>Output:</b> cql file which can used with cypher-shell to load the graphs into Neo4J graph database.
 The cql file can be imported to neo4j using cypher-shell as shown in next step.
 
 3) Take the <outputFile>.cql file from baseFolder and run it using cypher-shell
