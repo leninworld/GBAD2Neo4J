@@ -45,11 +45,11 @@ d 3 1 "with"
 
 ----------------------------------------------------------------------------------------------------
 ==================================================================================== 
-Sample Triangle graph from Neo4J as shown here below:
+Sample Triangle graph from Neo4J generated using GBAD2Neo4J is shown here below:
 
 ![Triangle](https://github.com/leninworld/GBAD2Neo4J/blob/master/src/images/triangle.png)
 
-Sample graph from Neo4J generated as shown here below:
+Sample graph from Neo4J generated generated using GBAD2Neo4J is shown here below:
 
 ![Sample](https://github.com/leninworld/GBAD2Neo4J/blob/master/src/images/sampleoutputGraph.png)
 
