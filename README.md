@@ -24,6 +24,7 @@ The cql file can be imported to neo4j using cypher-shell as shown in next step.
 3) Take the <outputFile>.cql file from baseFolder and run it using neo4j-shell (or) cypher-shell. In my experiment, neo4j-shell is faster than cypher-shell.
 
    Example:
+   
    ./neo4j-shell -c /pathToOutputFile/outputFile.cql
    
    ./cypher-shell -u username -p password "call apoc.cypher.runFile('/pathToOutputFile/outputFile.cql')"
