@@ -21,9 +21,10 @@ GBAD is a graph-based library developed by Dr. William (Bill) Eberle from Tennes
       <b>Output:</b> cql file which can used with cypher-shell to load the graphs into Neo4J graph database.
 The cql file can be imported to neo4j using cypher-shell as shown in next step.
 
-3) Take the <outputFile>.cql file from baseFolder and run it using cypher-shell
+3) Take the <outputFile>.cql file from baseFolder and run it using neo4j-shell (or) cypher-shell. In my experiment, neo4j-shell is faster than cypher-shell.
 
    Example:
+   ./neo4j-shell -c /pathToOutputFile/outputFile.cql
    ./cypher-shell -u username -p password "call apoc.cypher.runFile('/pathToOutputFile/outputFile.cql')"
 
 <b>Sample:</b> Sample GBAD graph file format for a triangle that has three nodes named "Integrity", "Intelligent", and "Energy"
