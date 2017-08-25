@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/workspace-graph-research.iml" filepath="$PROJECT_DIR$/.idea/modules/workspace-graph-research.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/workspace-graph-research-build.iml" filepath="$PROJECT_DIR$/.idea/modules/workspace-graph-research-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gbad2neo4j.iml" filepath="$PROJECT_DIR$/.idea/modules/gbad2neo4j.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gbad2neo4j-build.iml" filepath="$PROJECT_DIR$/.idea/modules/gbad2neo4j-build.iml" />
     </modules>
   </component>
 </project>
