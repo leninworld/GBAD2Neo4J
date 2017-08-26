@@ -4,7 +4,7 @@
 		module="gbad2neo4j-build"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20170824221839"
+		publication="20170826121204"
 		e:sbtVersion="0.13" e:scalaVersion="2.10"
 	>
 		<description>

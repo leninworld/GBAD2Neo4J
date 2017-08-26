@@ -1,8 +1,14 @@
 import scala.io.Source
 import java.io.File
+
 import scala.collection.mutable.HashMap
 import scala.collection.mutable.ArrayBuffer
 import java.io.PrintWriter
+
+import Convert_GBAD_2_JSON.baseFolder
+import Convert_GBAD_2_Neo4J_Cypher.isSOPprint
+import com.typesafe.config.ConfigFactory
+
 import scala.util.Try
 
 /*
@@ -11,7 +17,7 @@ import scala.util.Try
 *   Description : Convert GBAD graph file into CYPHER scripts that can create nodes and relationships when can be run in Neo4J graph database.
 * */
 
-object Convert_GBAD_2_Neo3J_Cypher extends App  {
+object Convert_GBAD_2_Neo4J_Cypher extends App  {
 
   // process and return create nodes and edges line for .csql
   def createNodesAndEdges(counterForXP:Integer ,
@@ -60,7 +66,8 @@ object Convert_GBAD_2_Neo3J_Cypher extends App  {
 
       var outString: String = s"""MATCH (n1:XP$counterForXP {id:"$xpStringSource"}),(n2:XP$counterForXP {id:"$xpStringDestination"}) CREATE (n1)-[:$newEdge]->(n2);\n"""
 
-      println(outString+"<---")
+      if(isSOPprint == 1)
+        println(outString+"<---")
 
       return outString
     } catch {
@@ -71,7 +78,7 @@ object Convert_GBAD_2_Neo3J_Cypher extends App  {
   }
 
   // convert GBAD to Neo4J
-  def Convert_GBAD_2_Neo3J_Cypherfn(inFile:String, outFile:String): Unit = {
+  def Convert_GBAD_2_Neo4J_Cypherfn(inFile:String, outFile:String, isSOPprint: Int): Unit = {
     try{
       println("Given Input File:"+inFile)
       println("Given Output File:"+outFile)
@@ -142,8 +149,10 @@ object Convert_GBAD_2_Neo3J_Cypher extends App  {
                                                   currSourceNodeNameInteger,
                                                   currDestinationNodeNameInteger
                                                 )
-            println(currCSQLstatement)
 
+          if(isSOPprint == 1)
+            println("curr SQL:"+currCSQLstatement)
+            // output
             writer.append(currCSQLstatement)
             writer.flush()
 
@@ -151,7 +160,10 @@ object Convert_GBAD_2_Neo3J_Cypher extends App  {
       }
 
       // last relationship exists in the file
-      println("last counterForXP:" + counterForXP +   " arrVertexIDandName.size:"+arrVertexIDandName.size)
+      if(isSOPprint == 1)
+        println("last counterForXP:" + counterForXP +   " arrVertexIDandName.size:"+arrVertexIDandName.size)
+
+
 
 //      currCSQLstatement = createNodesAndEdges(counterForXP,
 //                                              currSourceNode,
@@ -165,7 +177,7 @@ object Convert_GBAD_2_Neo3J_Cypher extends App  {
 //      writer.flush()
 
       // run cypher
-      // ./cypher-shell -u neo4j -p  "call apoc.cypher.runFile('/Users/lenin/C995_only/C995_OUTPUT_3_output.cql')"
+      // ./cypher-shell -u neo4j -p  "call apoc.cypher.runFile('/Users/lenin/Dropbox/C995_only/C995_OUTPUT_3_output.cql')"
 
 
     } catch {
@@ -174,15 +186,27 @@ object Convert_GBAD_2_Neo3J_Cypher extends App  {
   }
 
   // change baseFolder name here
-  val baseFolder = "/Users/lenin/Dropbox/GBAD2Neo4J/src/data/"
+  var baseFolder = ""
   // change input file name here
-  var inputFilename   = "triangle.g"
-  inputFilename   = baseFolder + inputFilename
+  var inputFilename = ""
   // change output file name here
-  var outputFilename   = "triangle_out.cql"
-  outputFilename   = baseFolder + outputFilename
+  var outputFilename = ""
+  // print SOP = {1,2}
+  var isSOPprint = -1
+
+  // load the configuration file
+  val config = ConfigFactory.parseFile(new File("/Users/lenin/Dropbox/GBAD2Neo4J/conf/application.conf"))
+
+      baseFolder = config.getString("Source.GBAD2Neo4J.baseFolder")
+      inputFilename = baseFolder + config.getString("Source.GBAD2Neo4J.inputFilename")
+      outputFilename = baseFolder + config.getString("Source.GBAD2Neo4J.outputFilename")
+      isSOPprint = 0 //debug => 1 = level 1 debug
+
+  println("<!--^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^--> read from config ( for Cypher out ) ")
+  println( "baseFolder:" + baseFolder +"\ninputFilename:" + inputFilename + "\noutputFilename:"+outputFilename )
+  println("<!--^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^-->")
 
   // convert GBAD to Neo4J
-  Convert_GBAD_2_Neo3J_Cypherfn(inputFilename, outputFilename)
+  Convert_GBAD_2_Neo4J_Cypherfn(inputFilename, outputFilename, isSOPprint)
 
 }

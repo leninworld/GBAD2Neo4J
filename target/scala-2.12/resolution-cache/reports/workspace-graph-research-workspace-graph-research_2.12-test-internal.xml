@@ -7,8 +7,32 @@
 		revision="1.0"
 		conf="test-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20170824221902"/>
+		date="20170826173634"/>
 	<dependencies>
+		<module organisation="com.typesafe" name="config">
+			<revision name="1.2.1" status="release" pubdate="20140502095416" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/typesafehub/config" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="8">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="2878" time="0" location="/Users/lenin/.ivy2/cache/com.typesafe/config/ivy-1.2.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/config/1.2.1/config-1.2.1.pom"/>
+				<caller organisation="workspace-graph-research" name="workspace-graph-research_2.12" conf="test, compile, provided, test-internal, runtime, optional" rev="1.2.1" rev-constraint-default="1.2.1" rev-constraint-dynamic="1.2.1" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="config" type="bundle" ext="jar" status="no" details="" size="219554" time="0" location="/Users/lenin/.ivy2/cache/com.typesafe/config/bundles/config-1.2.1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/config/1.2.1/config-1.2.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.neo4j.driver" name="neo4j-java-driver">
+			<revision name="1.0.0-M01" status="release" pubdate="20151120041228" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/neo4j/neo4j-java-driver" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="7">
+				<license name="Apache License, Version 2" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="4898" time="0" location="/Users/lenin/.ivy2/cache/org.neo4j.driver/neo4j-java-driver/ivy-1.0.0-M01.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/neo4j/driver/neo4j-java-driver/1.0.0-M01/neo4j-java-driver-1.0.0-M01.pom"/>
+				<caller organisation="workspace-graph-research" name="workspace-graph-research_2.12" conf="test, compile, provided, test-internal, runtime, optional" rev="1.0.0-M01" rev-constraint-default="1.0.0-M01" rev-constraint-dynamic="1.0.0-M01" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="neo4j-java-driver" type="jar" ext="jar" status="no" details="" size="188595" time="0" location="/Users/lenin/.ivy2/cache/org.neo4j.driver/neo4j-java-driver/jars/neo4j-java-driver-1.0.0-M01.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/neo4j/driver/neo4j-java-driver/1.0.0-M01/neo4j-java-driver-1.0.0-M01.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
 		<module organisation="org.scalaj" name="scalaj-http_2.12">
 			<revision name="2.3.0" status="release" pubdate="20161104084803" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/scalaj/scalaj-http" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="6">
 				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0"/>

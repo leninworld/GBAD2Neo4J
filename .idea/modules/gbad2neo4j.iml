@@ -22,11 +22,13 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="SBT: commons-codec:commons-codec:1.9:jar" level="project" />
-    <orderEntry type="library" name="SBT: org.scalaj:scalaj-http_2.12:2.3.0:jar" level="project" />
-    <orderEntry type="library" name="SBT: org.scala-lang:scala-xml:2.11.0-M4:jar" level="project" />
-    <orderEntry type="library" name="SBT: org.scala-lang:scala-library:2.12.3:jar" level="project" />
-    <orderEntry type="library" name="SBT: org.apache.httpcomponents:httpcore:4.4.6:jar" level="project" />
-    <orderEntry type="library" name="SBT: org.apache.httpcomponents:httpclient:4.5.3:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.typesafe:config:1.2.1:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.neo4j.driver:neo4j-java-driver:1.0.0-M01:jar" level="project" />
     <orderEntry type="library" name="SBT: commons-logging:commons-logging:1.2:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.apache.httpcomponents:httpclient:4.5.3:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.apache.httpcomponents:httpcore:4.4.6:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.scala-lang:scala-library:2.12.3:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.scala-lang:scala-xml:2.11.0-M4:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.scalaj:scalaj-http_2.12:2.3.0:jar" level="project" />
   </component>
 </module>

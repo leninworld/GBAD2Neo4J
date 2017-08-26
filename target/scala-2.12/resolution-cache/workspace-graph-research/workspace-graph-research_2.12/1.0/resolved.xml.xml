@@ -4,7 +4,7 @@
 		module="workspace-graph-research_2.12"
 		revision="1.0"
 		status="integration"
-		publication="20170824221902"
+		publication="20170826173634"
 	>
 		<description>
 		workspace-graph-research
@@ -37,5 +37,7 @@
 		<dependency org="org.apache.httpcomponents" name="httpclient" rev="4.5.3" conf="compile->default(compile)"/>
 		<dependency org="org.scala-lang" name="scala-xml" rev="2.11.0-M4" conf="compile->default(compile)"/>
 		<dependency org="org.scalaj" name="scalaj-http_2.12" rev="2.3.0" conf="compile->default(compile)"/>
+		<dependency org="org.neo4j.driver" name="neo4j-java-driver" rev="1.0.0-M01" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe" name="config" rev="1.2.1" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>

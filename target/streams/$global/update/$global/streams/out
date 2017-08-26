@@ -105,6 +105,28 @@
 [debug] == resolving dependencies workspace-graph-research#workspace-graph-research_2.12;1.0->org.scalaj#scalaj-http_2.12;2.3.0 [compile->master]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.12.0 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.12.3 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.12.0 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.12.3 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
+[debug] == resolving dependencies workspace-graph-research#workspace-graph-research_2.12;1.0->org.neo4j.driver#neo4j-java-driver;1.0.0-M01 [compile->default(compile)]
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]}
+[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.3 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)], compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]} => dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]}
+[info] Resolving org.neo4j.driver#neo4j-java-driver;1.0.0-M01 ...
+[debug] sbt-chain: Checking cache for: dependency: org.neo4j.driver#neo4j-java-driver;1.0.0-M01 {compile=[default(compile)]}
+[debug] sbt-chain: module revision found in cache: org.neo4j.driver#neo4j-java-driver;1.0.0-M01
+[debug] 	found org.neo4j.driver#neo4j-java-driver;1.0.0-M01 in sbt-chain
+[debug] == resolving dependencies workspace-graph-research#workspace-graph-research_2.12;1.0->org.neo4j.driver#neo4j-java-driver;1.0.0-M01 [compile->runtime]
+[debug] == resolving dependencies workspace-graph-research#workspace-graph-research_2.12;1.0->org.neo4j.driver#neo4j-java-driver;1.0.0-M01 [compile->compile]
+[debug] == resolving dependencies workspace-graph-research#workspace-graph-research_2.12;1.0->org.neo4j.driver#neo4j-java-driver;1.0.0-M01 [compile->master]
+[debug] == resolving dependencies workspace-graph-research#workspace-graph-research_2.12;1.0->com.typesafe#config;1.2.1 [compile->default(compile)]
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]}
+[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.3 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)], compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]} => dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]}
+[info] Resolving com.typesafe#config;1.2.1 ...
+[debug] sbt-chain: Checking cache for: dependency: com.typesafe#config;1.2.1 {compile=[default(compile)]}
+[debug] sbt-chain: module revision found in cache: com.typesafe#config;1.2.1
+[debug] 	found com.typesafe#config;1.2.1 in sbt-chain
+[debug] == resolving dependencies workspace-graph-research#workspace-graph-research_2.12;1.0->com.typesafe#config;1.2.1 [compile->runtime]
+[debug] == resolving dependencies workspace-graph-research#workspace-graph-research_2.12;1.0->com.typesafe#config;1.2.1 [compile->compile]
+[debug] == resolving dependencies workspace-graph-research#workspace-graph-research_2.12;1.0->com.typesafe#config;1.2.1 [compile->master]
 [debug] resolving dependencies for configuration 'runtime'
 [debug] == resolving dependencies for workspace-graph-research#workspace-graph-research_2.12;1.0 [runtime]
 [debug] == resolving dependencies for workspace-graph-research#workspace-graph-research_2.12;1.0 [compile]
@@ -191,6 +213,26 @@
 [debug] == resolving dependencies workspace-graph-research#workspace-graph-research_2.12;1.0->org.scalaj#scalaj-http_2.12;2.3.0 [compile->master]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.12.0 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.12.3 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.12.0 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.12.3 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
+[debug] == resolving dependencies workspace-graph-research#workspace-graph-research_2.12;1.0->org.neo4j.driver#neo4j-java-driver;1.0.0-M01 [compile->default(compile)]
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]}
+[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.3 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)], compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]} => dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]}
+[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.3 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)], compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]} => dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]}
+[debug] == resolving dependencies workspace-graph-research#workspace-graph-research_2.12;1.0->org.neo4j.driver#neo4j-java-driver;1.0.0-M01 [compile->runtime]
+[debug] == resolving dependencies workspace-graph-research#workspace-graph-research_2.12;1.0->org.neo4j.driver#neo4j-java-driver;1.0.0-M01 [compile->compile]
+[debug] == resolving dependencies workspace-graph-research#workspace-graph-research_2.12;1.0->org.neo4j.driver#neo4j-java-driver;1.0.0-M01 [compile->master]
+[debug] == resolving dependencies workspace-graph-research#workspace-graph-research_2.12;1.0->com.typesafe#config;1.2.1 [compile->default(compile)]
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]}
+[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.3 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)], compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]} => dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]}
+[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.3 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)], compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]} => dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]}
+[debug] == resolving dependencies workspace-graph-research#workspace-graph-research_2.12;1.0->com.typesafe#config;1.2.1 [compile->runtime]
+[debug] == resolving dependencies workspace-graph-research#workspace-graph-research_2.12;1.0->com.typesafe#config;1.2.1 [compile->compile]
+[debug] == resolving dependencies workspace-graph-research#workspace-graph-research_2.12;1.0->com.typesafe#config;1.2.1 [compile->master]
 [debug] resolving dependencies for configuration 'test'
 [debug] == resolving dependencies for workspace-graph-research#workspace-graph-research_2.12;1.0 [test]
 [debug] == resolving dependencies for workspace-graph-research#workspace-graph-research_2.12;1.0 [runtime]
@@ -299,6 +341,32 @@
 [debug] == resolving dependencies workspace-graph-research#workspace-graph-research_2.12;1.0->org.scalaj#scalaj-http_2.12;2.3.0 [compile->master]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.12.0 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.12.3 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.12.0 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.12.3 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
+[debug] == resolving dependencies workspace-graph-research#workspace-graph-research_2.12;1.0->org.neo4j.driver#neo4j-java-driver;1.0.0-M01 [compile->default(compile)]
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]}
+[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.3 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)], compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]} => dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]}
+[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.3 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)], compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]} => dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]}
+[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.3 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)], compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]} => dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]}
+[debug] == resolving dependencies workspace-graph-research#workspace-graph-research_2.12;1.0->org.neo4j.driver#neo4j-java-driver;1.0.0-M01 [compile->runtime]
+[debug] == resolving dependencies workspace-graph-research#workspace-graph-research_2.12;1.0->org.neo4j.driver#neo4j-java-driver;1.0.0-M01 [compile->compile]
+[debug] == resolving dependencies workspace-graph-research#workspace-graph-research_2.12;1.0->org.neo4j.driver#neo4j-java-driver;1.0.0-M01 [compile->master]
+[debug] == resolving dependencies workspace-graph-research#workspace-graph-research_2.12;1.0->com.typesafe#config;1.2.1 [compile->default(compile)]
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]}
+[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.3 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)], compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]} => dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]}
+[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.3 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)], compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]} => dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]}
+[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.3 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)], compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]} => dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]}
+[debug] == resolving dependencies workspace-graph-research#workspace-graph-research_2.12;1.0->com.typesafe#config;1.2.1 [compile->runtime]
+[debug] == resolving dependencies workspace-graph-research#workspace-graph-research_2.12;1.0->com.typesafe#config;1.2.1 [compile->compile]
+[debug] == resolving dependencies workspace-graph-research#workspace-graph-research_2.12;1.0->com.typesafe#config;1.2.1 [compile->master]
 [debug] resolving dependencies for configuration 'provided'
 [debug] == resolving dependencies for workspace-graph-research#workspace-graph-research_2.12;1.0 [provided]
 [debug] resolving dependencies for configuration 'optional'
@@ -431,6 +499,38 @@
 [debug] == resolving dependencies workspace-graph-research#workspace-graph-research_2.12;1.0->org.scalaj#scalaj-http_2.12;2.3.0 [compile->master]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.12.0 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.12.3 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.12.0 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.12.3 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
+[debug] == resolving dependencies workspace-graph-research#workspace-graph-research_2.12;1.0->org.neo4j.driver#neo4j-java-driver;1.0.0-M01 [compile->default(compile)]
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]}
+[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.3 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)], compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]} => dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]}
+[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.3 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)], compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]} => dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]}
+[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.3 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)], compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]} => dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]}
+[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.3 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)], compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]} => dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]}
+[debug] == resolving dependencies workspace-graph-research#workspace-graph-research_2.12;1.0->org.neo4j.driver#neo4j-java-driver;1.0.0-M01 [compile->runtime]
+[debug] == resolving dependencies workspace-graph-research#workspace-graph-research_2.12;1.0->org.neo4j.driver#neo4j-java-driver;1.0.0-M01 [compile->compile]
+[debug] == resolving dependencies workspace-graph-research#workspace-graph-research_2.12;1.0->org.neo4j.driver#neo4j-java-driver;1.0.0-M01 [compile->master]
+[debug] == resolving dependencies workspace-graph-research#workspace-graph-research_2.12;1.0->com.typesafe#config;1.2.1 [compile->default(compile)]
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]}
+[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.3 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)], compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]} => dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]}
+[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.3 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)], compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]} => dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]}
+[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.3 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)], compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]} => dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]}
+[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.3 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)], compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]} => dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]}
+[debug] == resolving dependencies workspace-graph-research#workspace-graph-research_2.12;1.0->com.typesafe#config;1.2.1 [compile->runtime]
+[debug] == resolving dependencies workspace-graph-research#workspace-graph-research_2.12;1.0->com.typesafe#config;1.2.1 [compile->compile]
+[debug] == resolving dependencies workspace-graph-research#workspace-graph-research_2.12;1.0->com.typesafe#config;1.2.1 [compile->master]
 [debug] == resolving dependencies for workspace-graph-research#workspace-graph-research_2.12;1.0 [optional]
 [debug] == resolving dependencies for workspace-graph-research#workspace-graph-research_2.12;1.0 [provided]
 [debug] resolving dependencies for configuration 'runtime-internal'
@@ -562,6 +662,38 @@
 [debug] == resolving dependencies workspace-graph-research#workspace-graph-research_2.12;1.0->org.scalaj#scalaj-http_2.12;2.3.0 [compile->master]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.12.0 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.12.3 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.12.0 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.12.3 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
+[debug] == resolving dependencies workspace-graph-research#workspace-graph-research_2.12;1.0->org.neo4j.driver#neo4j-java-driver;1.0.0-M01 [compile->default(compile)]
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]}
+[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.3 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)], compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]} => dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]}
+[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.3 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)], compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]} => dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]}
+[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.3 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)], compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]} => dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]}
+[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.3 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)], compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]} => dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]}
+[debug] == resolving dependencies workspace-graph-research#workspace-graph-research_2.12;1.0->org.neo4j.driver#neo4j-java-driver;1.0.0-M01 [compile->runtime]
+[debug] == resolving dependencies workspace-graph-research#workspace-graph-research_2.12;1.0->org.neo4j.driver#neo4j-java-driver;1.0.0-M01 [compile->compile]
+[debug] == resolving dependencies workspace-graph-research#workspace-graph-research_2.12;1.0->org.neo4j.driver#neo4j-java-driver;1.0.0-M01 [compile->master]
+[debug] == resolving dependencies workspace-graph-research#workspace-graph-research_2.12;1.0->com.typesafe#config;1.2.1 [compile->default(compile)]
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]}
+[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.3 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)], compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]} => dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]}
+[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.3 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)], compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]} => dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]}
+[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.3 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)], compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]} => dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]}
+[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.3 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)], compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]} => dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]}
+[debug] == resolving dependencies workspace-graph-research#workspace-graph-research_2.12;1.0->com.typesafe#config;1.2.1 [compile->runtime]
+[debug] == resolving dependencies workspace-graph-research#workspace-graph-research_2.12;1.0->com.typesafe#config;1.2.1 [compile->compile]
+[debug] == resolving dependencies workspace-graph-research#workspace-graph-research_2.12;1.0->com.typesafe#config;1.2.1 [compile->master]
 [debug] == resolving dependencies for workspace-graph-research#workspace-graph-research_2.12;1.0 [optional]
 [debug] resolving dependencies for configuration 'test-internal'
 [debug] == resolving dependencies for workspace-graph-research#workspace-graph-research_2.12;1.0 [test-internal]
@@ -735,6 +867,50 @@
 [debug] == resolving dependencies workspace-graph-research#workspace-graph-research_2.12;1.0->org.scalaj#scalaj-http_2.12;2.3.0 [compile->master]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.12.0 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.12.3 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.12.0 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.12.3 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
+[debug] == resolving dependencies workspace-graph-research#workspace-graph-research_2.12;1.0->org.neo4j.driver#neo4j-java-driver;1.0.0-M01 [compile->default(compile)]
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]}
+[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.3 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)], compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]} => dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]}
+[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.3 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)], compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]} => dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]}
+[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.3 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)], compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]} => dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]}
+[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.3 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)], compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]} => dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]}
+[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.3 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)], compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]} => dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]}
+[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.3 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)], compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]} => dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]}
+[debug] == resolving dependencies workspace-graph-research#workspace-graph-research_2.12;1.0->org.neo4j.driver#neo4j-java-driver;1.0.0-M01 [compile->runtime]
+[debug] == resolving dependencies workspace-graph-research#workspace-graph-research_2.12;1.0->org.neo4j.driver#neo4j-java-driver;1.0.0-M01 [compile->compile]
+[debug] == resolving dependencies workspace-graph-research#workspace-graph-research_2.12;1.0->org.neo4j.driver#neo4j-java-driver;1.0.0-M01 [compile->master]
+[debug] == resolving dependencies workspace-graph-research#workspace-graph-research_2.12;1.0->com.typesafe#config;1.2.1 [compile->default(compile)]
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]}
+[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.3 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)], compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]} => dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]}
+[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.3 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)], compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]} => dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]}
+[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.3 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)], compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]} => dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]}
+[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.3 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)], compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]} => dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]}
+[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.3 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)], compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]} => dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]}
+[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.3 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)], compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]} => dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]}
+[debug] == resolving dependencies workspace-graph-research#workspace-graph-research_2.12;1.0->com.typesafe#config;1.2.1 [compile->runtime]
+[debug] == resolving dependencies workspace-graph-research#workspace-graph-research_2.12;1.0->com.typesafe#config;1.2.1 [compile->compile]
+[debug] == resolving dependencies workspace-graph-research#workspace-graph-research_2.12;1.0->com.typesafe#config;1.2.1 [compile->master]
 [debug] == resolving dependencies for workspace-graph-research#workspace-graph-research_2.12;1.0 [optional]
 [debug] == resolving dependencies for workspace-graph-research#workspace-graph-research_2.12;1.0 [provided]
 [debug] resolving dependencies for configuration 'plugin'
@@ -903,6 +1079,8 @@
 [debug] 	[NOT REQUIRED] org.apache.httpcomponents#httpclient;4.5.3!httpclient.jar
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-xml;2.11.0-M4!scala-xml.jar
 [debug] 	[NOT REQUIRED] org.scalaj#scalaj-http_2.12;2.3.0!scalaj-http_2.12.jar
+[debug] 	[NOT REQUIRED] org.neo4j.driver#neo4j-java-driver;1.0.0-M01!neo4j-java-driver.jar
+[debug] 	[NOT REQUIRED] com.typesafe#config;1.2.1!config.jar(bundle)
 [debug] 	[NOT REQUIRED] org.apache.httpcomponents#httpcore;4.4.6!httpcore.jar
 [debug] 	[NOT REQUIRED] commons-logging#commons-logging;1.2!commons-logging.jar
 [debug] 	[NOT REQUIRED] commons-codec#commons-codec;1.9!commons-codec.jar
@@ -910,7 +1088,7 @@
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-reflect;2.12.3!scala-reflect.jar
 [debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.12;1.0.6!scala-xml_2.12.jar(bundle)
 [debug] 	[NOT REQUIRED] jline#jline;2.14.4!jline.jar
-[debug] :: resolution report :: resolve 730ms :: artifacts dl 25ms
+[debug] :: resolution report :: resolve 1567ms :: artifacts dl 40ms
 [debug] 	report for workspace-graph-research#workspace-graph-research_2.12;1.0 compile produced in /Users/lenin/Dropbox/GBAD2Neo4J/target/scala-2.12/resolution-cache/reports/workspace-graph-research-workspace-graph-research_2.12-compile.xml
 [debug] 	report for workspace-graph-research#workspace-graph-research_2.12;1.0 runtime produced in /Users/lenin/Dropbox/GBAD2Neo4J/target/scala-2.12/resolution-cache/reports/workspace-graph-research-workspace-graph-research_2.12-runtime.xml
 [debug] 	report for workspace-graph-research#workspace-graph-research_2.12;1.0 test produced in /Users/lenin/Dropbox/GBAD2Neo4J/target/scala-2.12/resolution-cache/reports/workspace-graph-research-workspace-graph-research_2.12-test.xml
@@ -924,5 +1102,5 @@
 [debug] 	report for workspace-graph-research#workspace-graph-research_2.12;1.0 docs produced in /Users/lenin/Dropbox/GBAD2Neo4J/target/scala-2.12/resolution-cache/reports/workspace-graph-research-workspace-graph-research_2.12-docs.xml
 [debug] 	report for workspace-graph-research#workspace-graph-research_2.12;1.0 pom produced in /Users/lenin/Dropbox/GBAD2Neo4J/target/scala-2.12/resolution-cache/reports/workspace-graph-research-workspace-graph-research_2.12-pom.xml
 [debug] 	report for workspace-graph-research#workspace-graph-research_2.12;1.0 scala-tool produced in /Users/lenin/Dropbox/GBAD2Neo4J/target/scala-2.12/resolution-cache/reports/workspace-graph-research-workspace-graph-research_2.12-scala-tool.xml
-[debug] 	resolve done (730ms resolve - 25ms download)
+[debug] 	resolve done (1567ms resolve - 40ms download)
 [info] Done updating.
