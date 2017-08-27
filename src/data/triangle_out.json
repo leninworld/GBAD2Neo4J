@@ -1,23 +1,54 @@
 [
-{ "xp" :"1",
- "type":"v",
+ [{
+  "xp":"1"
+ }, { "type":"v",
  "index":"1",
- "name":"Integrity"}, { "xp" :"1",
- "type":"v",
+ "name":"Integrity"}, 
+  { "type":"v",
  "index":"2",
- "name":"Intelligent"}, { "xp" :"1",
- "type":"v",
+ "name":"Intelligent"}, 
+  { "type":"v",
  "index":"3",
- "name":"Energy"}, {"type": "d",
+ "name":"Energy"}, 
+{"type": "d",
  "index1": "1" ,
  "index2": "2" ,
  "edge": "with"
-},{"type": "d",
+},
+{"type": "d",
  "index1": "2" ,
  "index2": "3" ,
  "edge": "with"
-},{"type": "d",
+},
+{"type": "d2",
  "index1": "3" ,
  "index2": "1" ,
  "edge": "with"
-}]
+}
+] ,[{
+  "xp":"2"
+ }, { "type":"v",
+ "index":"1",
+ "name":"Integrity"}, 
+  { "type":"v",
+ "index":"2",
+ "name":"Intelligent"}, 
+  { "type":"v",
+ "index":"3",
+ "name":"Energy"}, 
+{"type": "d",
+ "index1": "1" ,
+ "index2": "2" ,
+ "edge": "with"
+},
+{"type": "d",
+ "index1": "2" ,
+ "index2": "3" ,
+ "edge": "with"
+},
+{"type": "d2",
+ "index1": "3" ,
+ "index2": "1" ,
+ "edge": "with"
+}
+]]

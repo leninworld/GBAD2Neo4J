@@ -192,15 +192,17 @@ object Convert_GBAD_2_Neo4J_Cypher extends App  {
   // change output file name here
   var outputFilename = ""
   // print SOP = {1,2}
-  var isSOPprint = -1
+  var isSOPprint:Int = -1
+
+  var confFile = "/Users/lenin/Dropbox/GBAD2Neo4J/conf/application.conf"
 
   // load the configuration file
-  val config = ConfigFactory.parseFile(new File("/Users/lenin/Dropbox/GBAD2Neo4J/conf/application.conf"))
+  val config = ConfigFactory.parseFile(new File(confFile))
 
       baseFolder = config.getString("Source.GBAD2Neo4J.baseFolder")
       inputFilename = baseFolder + config.getString("Source.GBAD2Neo4J.inputFilename")
       outputFilename = baseFolder + config.getString("Source.GBAD2Neo4J.outputFilename")
-      isSOPprint = 0 //debug => 1 = level 1 debug
+      isSOPprint = config.getInt("Source.isSOPprint") //debug => 1 = level 1 debug
 
   println("<!--^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^--> read from config ( for Cypher out ) ")
   println( "baseFolder:" + baseFolder +"\ninputFilename:" + inputFilename + "\noutputFilename:"+outputFilename )
