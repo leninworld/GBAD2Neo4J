@@ -7,21 +7,41 @@ Convert GBAD formatted graph files into Neo4J graph cql files and then load into
 <b>Introduction to GBAD:</b>
 GBAD is a graph-based library developed by Dr. William (Bill) Eberle from Tennessee Tech University. It takes graph input files and outputs anomalies (i.e., edges and vertices) found using minimum descriptive length approach. Related paper using this library can be found [here](http://ailab.wsu.edu/adgs/pdfs/MookiahVAST2014.pdf) and [here](http://www.aaai.org/ocs/index.php/FLAIRS/FLAIRS15/paper/download/10378/10281). You dont need GBAD to run the scripts in this repository, but in case you just want it, you can be downloaded from [here](http://users.csc.tntech.edu/~weberle/gbad/download.html).
 
+<b>What can GBAD2Neo4J library do?</b>
+1) It can convert GBAD graph file to Neo4J cypher cql file and then it can be dumped into Neo4J (See step 3 below).
+2) It can convert GBAD graph file into JSON file format.
+
 <b>Prerequisite:</b>
 1) Neo4J installed and running.
-2) IntelliJ IDE or similar.
+
+<b>Download:</b>
+
+Download the jar file from [here](https://www.dropbox.com/s/mglyp7r5p4wlqrs/gbad2neo4j.jar?dl=0).
+
+<b>Usage:</b> 
+
+java -jar gbad2neo4j.jar <Option> <ConfigFile>
 
 <b>Steps:</b>
-1) Import this cloned project from github into IntelliJ.
 
-2) Run "Convert_GBAD_2_Neo3J_Cypher.scala" file after changing values for variables inputFilename , outputFilename , and baseFolder.
+1) Change the values in the config file for inputFilename , outputFilename , and baseFolder.
+Sample configuration file is located in "GBAD2Neo4J/conf/application.conf". 
 
-      <b>Input:</b> GBAD formatted graph file (read further below for sample file examples).
+      a) Configuration under Source.GBAD2Neo4J is used when converting GBAD to Neo4J cypher .cql file.
+ 
+      b) Configuraion under Source.GBAD2JSON is used when converting GBAD to JSON file.
 
-      <b>Output:</b> cql file which can used with cypher-shell to load the graphs into Neo4J graph database.
-The cql file can be imported to neo4j using cypher-shell as shown in next step.
+2) We assume you have "gbad2neo4j.jar" in current directory.
 
-3) Take the <outputFile>.cql file from baseFolder and run it using neo4j-shell (or) cypher-shell. In my experiment, neo4j-shell is faster than cypher-shell.
+      a) Run below command for converting GBAD to Neo4J .cql.
+      
+            java -jar gbad2neo4j.jar 1 <path_to_config_file>
+
+      b) Run below command for converting GBAD to JSON file.
+      
+            java -jar gbad2neo4j.jar 2 <path_to_config_file>
+ 
+3) <b>Dumping into Neo4J</b>: Take the <outputFile>.cql file from baseFolder and run it using neo4j-shell (or) cypher-shell. In my experiment, neo4j-shell is faster than cypher-shell.
 
    Example:
    
