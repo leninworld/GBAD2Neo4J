@@ -13,7 +13,7 @@ Download the jar file from [here](https://www.dropbox.com/s/mglyp7r5p4wlqrs/gbad
 
 <b>Usage:</b> 
 
-java -jar gbad2neo4j.jar <Option> <ConfigFile>
+java -jar gbad2neo4j.jar \<Option\> \<ConfigFile\>
 
 <b>Steps:</b>
 
