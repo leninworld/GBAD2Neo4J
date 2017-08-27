@@ -1,7 +1,7 @@
 # GBAD2Neo4J
 
 <b>What can GBAD2Neo4J library do?</b>
-1) It can convert GBAD graph file to Neo4J cypher cql file and then it can be dumped into Neo4J (See step 3 below).
+1) It can convert GBAD graph file to Neo4J cypher cql file and then it can be dumped into Neo4J.
 2) It can convert GBAD graph file into JSON file format.
 
 <b>Introduction to GBAD:</b>
