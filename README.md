@@ -1,8 +1,8 @@
 # GBAD2Neo4J
 
 <b>What can GBAD2Neo4J library do?</b>
-1) It can convert GBAD graph file to Neo4J cypher cql file and then it can be dumped into Neo4J.
-2) It can convert GBAD graph file into JSON file format.
+1) It helps to convert GBAD graph file to Neo4J cypher cql file and then it can be dumped into Neo4J.
+2) It helps to convert GBAD graph file into JSON file format.
 
 <b>Introduction to GBAD:</b>
 GBAD is a graph-based library developed by Dr. William (Bill) Eberle from Tennessee Tech University. It takes graph input files and outputs anomalies (i.e., edges and vertices) found using minimum descriptive length approach. Related paper using this library can be found [here](http://ailab.wsu.edu/adgs/pdfs/MookiahVAST2014.pdf) and [here](http://www.aaai.org/ocs/index.php/FLAIRS/FLAIRS15/paper/download/10378/10281). You dont need GBAD to run the scripts in this repository, but in case you just want it, you can be downloaded from [here](http://users.csc.tntech.edu/~weberle/gbad/download.html).
