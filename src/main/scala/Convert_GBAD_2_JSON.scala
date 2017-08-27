@@ -1,9 +1,11 @@
 import java.io.{File, PrintWriter}
 
 import Convert_GBAD_2_Neo4J_Cypher._
+import com.google.gson.{Gson, GsonBuilder, JsonParser}
 
 import scala.io.Source
 import com.typesafe.config.{Config, ConfigFactory}
+import play.api.libs.json._
 
 import scala.util.Try
 
@@ -45,17 +47,24 @@ object Convert_GBAD_2_JSON extends App  {
 
      */
 
+
+
+  var gson = new GsonBuilder().setPrettyPrinting.create
+  var jp = new JsonParser()
+
+
   // convert GBAD to JSON - Generate type 1 JSON output
   def Convert_GBAD_2_JSON_1(inFile:String, outFile:String, isSOPprint:Int): Unit = {
     try{
       println("Given Input File:"+inFile)
       println("Given Output File:"+outFile)
-
+      var oneBigJSON = ""
       var currSourceNode = ""
       var currDestinationNode = ""
       var currEdge = ""
       // output file
       val writer = new PrintWriter(new File(outFile))
+      var isPRINTwithoutPrettyJson = false
 
       var counterForXP = 0
       var currVertexID :Integer = 0
@@ -66,9 +75,11 @@ object Convert_GBAD_2_JSON extends App  {
       var concEdgeJSONstring = ""
       var concFinal = ""
       // start of JSON in out
-      writer.append("["+"\n")
-      writer.flush()
-
+      if(isPRINTwithoutPrettyJson == true) {
+        writer.append("[" + "\n")
+        writer.flush()
+      }
+      oneBigJSON = "["
       // read each line
       for (line <- Source.fromFile(inFile).getLines) {
         concVertexJSONstring = ""
@@ -148,11 +159,25 @@ object Convert_GBAD_2_JSON extends App  {
       }
       // final before writing
       concFinal = concFinal.substring(0, concFinal.length - 1)
-      // writing into output file
-      writer.append(concFinal)
-      writer.flush()
 
-      writer.append("]"+"\n")
+      if(isPRINTwithoutPrettyJson == true) {
+        // writing into output file
+        writer.append(concFinal)
+        writer.flush()
+      }
+
+      oneBigJSON += concFinal
+
+      if(isPRINTwithoutPrettyJson == true) {
+        writer.append("]" + "\n")
+        writer.flush()
+      }
+
+      oneBigJSON += "]"
+      // print pretty
+      var je = jp.parse(oneBigJSON)
+      var prettyJsonString = gson.toJson(je)
+      writer.append(prettyJsonString)
       writer.flush()
 
     } catch {
@@ -165,13 +190,13 @@ object Convert_GBAD_2_JSON extends App  {
     try{
       println("Given Input File:"+inFile)
       println("Given Output File:"+outFile)
-
+      var oneBigJSON = ""
       var currSourceNode = ""
       var currDestinationNode = ""
       var currEdge = ""
       // output file
       val writer = new PrintWriter(new File(outFile))
-
+      var isPRINTwithoutPrettyJson = false
       var counterForXP = 0
       var currVertexID :Integer = 0
       var currSourceNodeNameInteger :Integer = 0
@@ -181,9 +206,14 @@ object Convert_GBAD_2_JSON extends App  {
       var concEdgeJSONstring = ""
       var concFinal = ""
       var line = ""
-      // start of JSON in out
-      writer.append("["+"\n")
-      writer.flush()
+      if(isPRINTwithoutPrettyJson == true) {
+        // start of JSON in out
+        writer.append("[" + "\n")
+        writer.flush()
+      }
+
+      oneBigJSON = "["
+
       var nextLine = ""
       var arrayLines: Array[String] = Source.fromFile(inFile).getLines.toArray
       var counter:Int = 0
@@ -315,15 +345,29 @@ object Convert_GBAD_2_JSON extends App  {
         //
         if(nextLine.indexOf("XP #")>=0 || isNextLineExists == false){
           var conc = concVertexJSONstring + concEdgeJSONstring + "]"
-//              conc = conc.substring(0, conc.length - 1)
-          // writing into output file
-          writer.append(conc)
-          writer.flush()
+
+          if(isPRINTwithoutPrettyJson == true) {
+            // writing into output file
+            writer.append(conc)
+            writer.flush()
+          }
+
+          oneBigJSON += conc
         }
         counter += 1
       }
-      //
-      writer.append("]"+"\n")
+      if(isPRINTwithoutPrettyJson == true) {
+        //
+        writer.append("]" + "\n")
+        writer.flush()
+      }
+      // making one big json
+      oneBigJSON += "]"
+      // print pretty
+      var je = jp.parse(oneBigJSON)
+      var prettyJsonString = gson.toJson(je)
+      // write pretty JSON
+      writer.append(prettyJsonString +"\n")
       writer.flush()
 
     } catch {

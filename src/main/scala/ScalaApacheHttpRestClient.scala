@@ -1,4 +1,4 @@
-// taken from https://alvinalexander.com/scala/scala-rest-client-apache-httpclient-restful-clients
+// Source taken from https://alvinalexander.com/scala/scala-rest-client-apache-httpclient-restful-clients
 
 
 import java.io._
@@ -45,7 +45,7 @@ object ScalaApacheHttpRestClient {
     var content = ""
     if (entity != null) {
       val inputStream = entity.getContent()
-      content = io.Source.fromInputStream(inputStream).getLines.mkString
+      content = scala.io.Source.fromInputStream(inputStream).getLines.mkString
       inputStream.close
     }
     httpClient.getConnectionManager().shutdown()

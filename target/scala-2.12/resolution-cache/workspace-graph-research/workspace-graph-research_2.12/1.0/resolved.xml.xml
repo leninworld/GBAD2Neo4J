@@ -4,7 +4,7 @@
 		module="workspace-graph-research_2.12"
 		revision="1.0"
 		status="integration"
-		publication="20170826173634"
+		publication="20170826215444"
 	>
 		<description>
 		workspace-graph-research
@@ -38,6 +38,7 @@
 		<dependency org="org.scala-lang" name="scala-xml" rev="2.11.0-M4" conf="compile->default(compile)"/>
 		<dependency org="org.scalaj" name="scalaj-http_2.12" rev="2.3.0" conf="compile->default(compile)"/>
 		<dependency org="org.neo4j.driver" name="neo4j-java-driver" rev="1.0.0-M01" conf="compile->default(compile)"/>
-		<dependency org="com.typesafe" name="config" rev="1.2.1" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play_2.11" rev="2.6.3" conf="compile->default(compile)"/>
+		<dependency org="com.google.code.gson" name="gson" rev="1.7.1" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>

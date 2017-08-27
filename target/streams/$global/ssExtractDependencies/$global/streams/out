@@ -1,4 +1,4 @@
-sbt.ResolveException: unresolved dependency: com.github.renesca#renesca-magic_2.12;0.3.4-1: not found
+sbt.ResolveException: unresolved dependency: com.typesafe.play#play_2.12;2.2.2: not found
 	at sbt.IvyActions$.sbt$IvyActions$$resolve(IvyActions.scala:313)
 	at sbt.IvyActions$$anonfun$updateEither$1.apply(IvyActions.scala:191)
 	at sbt.IvyActions$$anonfun$updateEither$1.apply(IvyActions.scala:168)
@@ -46,7 +46,7 @@ sbt.ResolveException: unresolved dependency: com.github.renesca#renesca-magic_2.
 	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
 	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-[error] (*:ssExtractDependencies) sbt.ResolveException: unresolved dependency: com.github.renesca#renesca-magic_2.12;0.3.4-1: not found
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+[error] (*:ssExtractDependencies) sbt.ResolveException: unresolved dependency: com.typesafe.play#play_2.12;2.2.2: not found
