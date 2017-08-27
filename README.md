@@ -22,7 +22,7 @@ Sample configuration file is located in "GBAD2Neo4J/conf/application.conf".
 
       a) Configuration under Source.GBAD2Neo4J is used when converting GBAD to Neo4J cypher .cql file.
  
-      b) Configuraion under Source.GBAD2JSON is used when converting GBAD to JSON file.
+      b) Configuration under Source.GBAD2JSON is used when converting GBAD to JSON file.
 
 2) We assume you have "gbad2neo4j.jar" in current directory.
 
