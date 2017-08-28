@@ -9,7 +9,7 @@ GBAD is a graph-based library developed by Dr. William (Bill) Eberle from Tennes
 
 <b>Download:</b>
 
-Download the jar file from [here](https://www.dropbox.com/s/mglyp7r5p4wlqrs/gbad2neo4j.jar?dl=0).
+Download the jar file from [here](https://www.dropbox.com/s/pjnin9vxssy6b2s/gbad2neo4j.jar?dl=0).
 
 <b>Usage:</b> 
 
