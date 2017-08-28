@@ -1,4 +1,5 @@
-// This code is taken from https://www.alvinalexander.com/source-code/scala/scala-http-post-client-example-java-uses-apache-httpclient
+// This code is initially taken from below URL and then modified
+// https://www.alvinalexander.com/source-code/scala/scala-http-post-client-example-java-uses-apache-httpclient
 
 import java.io._
 import org.apache.commons._
@@ -13,13 +14,7 @@ import org.apache.http.client.entity.UrlEncodedFormEntity
 //
 object HttpPostTester {
 
-  def main(args: Array[String]) {
-
-    var url = "http://127.0.0.1:7474/db/data/transaction/commit"
-    getRestContent(url);
-  }
-
-  def getRestContent(url:String): String = {
+  def getHTTP(url:String): String = {
 
 //  val url = "http://httpbin.org/post";
     val post = new HttpPost(url)
@@ -46,6 +41,12 @@ object HttpPostTester {
     response.getAllHeaders.foreach(arg => println(arg))
 
     return ""
+  }
+
+  def main(args: Array[String]) {
+
+    var url = "http://127.0.0.1:7474/db/data/transaction/commit"
+    getHTTP(url)
   }
 
 }

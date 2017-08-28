@@ -18,7 +18,7 @@ import scala.util.Try
 object Convert_GBAD_2_JSON extends App  {
 
     /*
-      * SAMPLE json OUTPUT file for TYPE 2
+      * SAMPLE json OUTPUT file ( TYPE 2 )
        [
         [{
             "xp": "1"
@@ -47,11 +47,8 @@ object Convert_GBAD_2_JSON extends App  {
 
      */
 
-
-
   var gson = new GsonBuilder().setPrettyPrinting.create
   var jp = new JsonParser()
-
 
   // convert GBAD to JSON - Generate type 1 JSON output
   def Convert_GBAD_2_JSON_1(inFile:String, outFile:String, isSOPprint:Int): Unit = {
@@ -337,7 +334,6 @@ object Convert_GBAD_2_JSON extends App  {
             concEdgeJSONstring = jsonEdgeString
           else
             concEdgeJSONstring += jsonEdgeString
-
 
           // println("jsonEdgeString:" + jsonEdgeString);
         }

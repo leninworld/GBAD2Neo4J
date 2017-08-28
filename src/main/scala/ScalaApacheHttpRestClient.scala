@@ -1,5 +1,3 @@
-// Source taken from https://alvinalexander.com/scala/scala-rest-client-apache-httpclient-restful-clients
-
 
 import java.io._
 import org.apache.http.HttpEntity
@@ -16,40 +14,32 @@ object ScalaApacheHttpRestClient {
 
   def main(args: Array[String]) {
 
-    // (1) get the content from the yahoo weather api url
-    val content = getRestContent("https://atwar.blogs.nytimes.com/feed/")
+    val content = getRestContent("http://rss.nytimes.com/services/xml/rss/nyt/Education.xml")
 
     println("got->"+content)
 
-    // (2) convert it to xml
-//    val xml = XML.loadString(content)
-//    assert(xml.isInstanceOf[scala.xml.Elem])  // needed?
-//
-//    // (3) search the xml for the nodes i want
+//    val xmlContent = XML.loadString(content)
 //    val temp = (xml \\ "channel" \\ "item" \ "condition" \ "@temp") text
-//    val text = (xml \\ "channel" \\ "item" \ "condition" \ "@text") text
-//
-//    // (4) print the results
-//    val currentWeather = "The current temperature is %s degrees, and the sky is %s.".format(temp, text.toLowerCase())
-//    println(currentWeather)
+//    val extractText = (xml \\ "channel" \\ "item" \ "condition" \ "@text") text
+
   }
 
   /**
-    * Returns the text content from a REST URL. Returns a blank String if there
-    * is a problem.
+    * Return content from the URL
     */
-  def getRestContent(url:String): String = {
-    val httpClient = new DefaultHttpClient()
-    val httpResponse = httpClient.execute(new HttpGet(url))
-    val entity = httpResponse.getEntity()
-    var content = ""
+  def getRestContent(httpUrl:String): String = {
+    var outText = ""
+    val client = new DefaultHttpClient()
+    val response = client.execute(new HttpGet(httpUrl))
+    val entity = response.getEntity()
+
     if (entity != null) {
-      val inputStream = entity.getContent()
-      content = scala.io.Source.fromInputStream(inputStream).getLines.mkString
-      inputStream.close
+      val inStream = entity.getContent()
+      outText = scala.io.Source.fromInputStream(inStream).getLines.mkString
+      inStream.close
     }
-    httpClient.getConnectionManager().shutdown()
-    return content
+    client.getConnectionManager().shutdown()
+    return outText
   }
 
 }

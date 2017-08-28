@@ -17,7 +17,7 @@ import scala.util.Try
 *   Description : Convert GBAD graph file into CYPHER scripts that can create nodes and relationships when can be run in Neo4J graph database.
 * */
 
-object Convert_GBAD_2_Neo4J_Cypher extends App  {
+object Convert_GBAD_2_Neo4J_Cypher{
 
   // process and return create nodes and edges line for .csql
   def createNodesAndEdges(counterForXP:Integer ,
