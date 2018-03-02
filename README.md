@@ -7,6 +7,18 @@
 <b>Introduction to GBAD:</b>
 GBAD is a graph-based library developed by Dr. William (Bill) Eberle from Tennessee Tech University. It takes graph input files and outputs anomalies (i.e., edges and vertices) found using minimum descriptive length approach. Related paper using this library can be found [here](http://ailab.wsu.edu/adgs/pdfs/MookiahVAST2014.pdf) and [here](http://www.aaai.org/ocs/index.php/FLAIRS/FLAIRS15/paper/download/10378/10281). You dont need GBAD to run the scripts in this repository, but in case you just want it, you can be downloaded from [here](http://users.csc.tntech.edu/~weberle/gbad/download.html).
 
+
+<b>Neo4J related setting:</b>
+1) Download "apoc-3.3.0.2-all.jar" and copy to "plugin" folder in your neo4j home folder.
+
+2) Setup the plugin folder in neo4j.conf.
+
+dbms.directories.plugins=<path_for_plugin_folder>
+
+3) Setup the import file configuration in neo4j.conf.
+
+apoc.import.file.enabled=true
+
 <b>Download:</b>
 
 Download the jar file from [here](https://www.dropbox.com/s/pjnin9vxssy6b2s/gbad2neo4j.jar?dl=0).
