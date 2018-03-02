@@ -4,7 +4,7 @@
 		module="workspace-graph-research$sbt_2.10"
 		revision="1.0"
 		status="integration"
-		publication="20180302135612"
+		publication="20180302141530"
 	/>
 	<configurations>
 		<conf name="default" visibility="public"/>
@@ -13,5 +13,7 @@
 	</publications>
 	<dependencies>
 		<dependency org="org.scala-sbt" name="sbt" rev="0.13.16" conf="default->default(compile)"/>
+		<dependency org="org.jetbrains" name="sbt-structure-extractor" rev="2017.2" conf="default->default(compile)" scalaVersion="2.10" sbtVersion="0.13"/>
+		<dependency org="org.jetbrains" name="sbt-idea-shell" rev="2017.2" conf="default->default(compile)" scalaVersion="2.10" sbtVersion="0.13"/>
 	</dependencies>
 </ivy-module>

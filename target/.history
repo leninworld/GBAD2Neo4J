@@ -1,3 +1,5 @@
 all {file:/Users/moole04/OneDrive%20-%20CA%20Technologies/workspace/GBAD2Neo4J/}gbad2neo4j/products {file:/Users/moole04/OneDrive%20-%20CA%20Technologies/workspace/GBAD2Neo4J/}gbad2neo4j/test:products
 ;reload; set _root_.org.jetbrains.sbt.StructureKeys.sbtStructureOptions in Global := "download resolveClassifiers resolveSbtClassifiers" ;*/*:dumpStructureTo /private/var/folders/9l/m6vzd3hd0yd6m_x_1wkr9rq96fhvgx/T/sbt-structure.xml; session clear-all
 all {file:/Users/moole04/OneDrive%20-%20CA%20Technologies/workspace/GBAD2Neo4J/}gbad2neo4j/products {file:/Users/moole04/OneDrive%20-%20CA%20Technologies/workspace/GBAD2Neo4J/}gbad2neo4j/test:products
+;reload; set _root_.org.jetbrains.sbt.StructureKeys.sbtStructureOptions in Global := "download resolveClassifiers resolveSbtClassifiers" ;*/*:dumpStructureTo /private/var/folders/9l/m6vzd3hd0yd6m_x_1wkr9rq96fhvgx/T/sbt-structure.xml; session clear-all
+all {file:/Users/moole04/Dropbox/workspace_workplace/GBAD2Neo4J/}gbad2neo4j/products {file:/Users/moole04/Dropbox/workspace_workplace/GBAD2Neo4J/}gbad2neo4j/test:products

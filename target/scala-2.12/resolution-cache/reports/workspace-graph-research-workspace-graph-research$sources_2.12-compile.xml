@@ -7,7 +7,7 @@
 		revision="1.0"
 		conf="compile"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20180302135614"/>
+		date="20180302141532"/>
 	<dependencies>
 		<module organisation="com.google.code.gson" name="gson">
 			<revision name="1.7.1" status="release" pubdate="20110413160032" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://code.google.com/p/google-gson/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="41">

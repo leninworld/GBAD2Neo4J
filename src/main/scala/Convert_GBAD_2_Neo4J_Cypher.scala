@@ -195,6 +195,8 @@ object Convert_GBAD_2_Neo4J_Cypher{
   var isSOPprint:Int = -1
 
   var confFile = "/Users/Downloads/important/GBAD2Neo4J/conf/application.conf"
+       confFile = "/Users/moole04/Dropbox/workspace_workplace/GBAD2Neo4J/conf/application.conf"
+
 
   // load the configuration file
   val config = ConfigFactory.parseFile(new File(confFile))
@@ -209,6 +211,6 @@ object Convert_GBAD_2_Neo4J_Cypher{
   println("<!--^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^-->")
 
   // convert GBAD to Neo4J
-  Convert_GBAD_2_Neo4J_Cypherfn(inputFilename, outputFilename, isSOPprint)
+//  Convert_GBAD_2_Neo4J_Cypherfn(inputFilename, outputFilename, isSOPprint)
 
 }

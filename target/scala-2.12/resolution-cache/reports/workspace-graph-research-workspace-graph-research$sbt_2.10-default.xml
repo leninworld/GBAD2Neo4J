@@ -7,8 +7,32 @@
 		revision="1.0"
 		conf="default"
 		confs="default"
-		date="20180302135612"/>
+		date="20180302141530"/>
 	<dependencies>
+		<module organisation="org.jetbrains" name="sbt-idea-shell">
+			<revision name="2017.2" status="release" pubdate="20170724193459" resolver="sbt-chain" artresolver="sbt-chain" extra-scalaVersion="2.10" extra-sbtVersion="0.13" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="52">
+				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+				<metadata-artifact status="no" details="" size="1733" time="0" location="/Users/moole04/.ivy2/cache/scala_2.10/sbt_0.13/org.jetbrains/sbt-idea-shell/ivy-2017.2.xml" searched="false" origin-is-local="false" origin-location="https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.jetbrains/sbt-idea-shell/scala_2.10/sbt_0.13/2017.2/ivys/ivy.xml"/>
+				<caller organisation="workspace-graph-research" name="workspace-graph-research$sbt_2.10" conf="default" rev="2017.2" rev-constraint-default="2017.2" rev-constraint-dynamic="2017.2" callerrev="1.0" extra-scalaVersion="2.10" extra-sbtVersion="0.13"/>
+				<artifacts>
+					<artifact name="sbt-idea-shell" type="jar" ext="jar" status="no" details="" size="11987" time="0" location="/Users/moole04/.ivy2/cache/scala_2.10/sbt_0.13/org.jetbrains/sbt-idea-shell/jars/sbt-idea-shell-2017.2.jar">
+						<origin-location is-local="false" location="https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.jetbrains/sbt-idea-shell/scala_2.10/sbt_0.13/2017.2/jars/sbt-idea-shell.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.jetbrains" name="sbt-structure-extractor">
+			<revision name="2017.2" status="release" pubdate="20170725162930" resolver="sbt-chain" artresolver="sbt-chain" extra-scalaVersion="2.10" extra-sbtVersion="0.13" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="51">
+				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+				<metadata-artifact status="no" details="" size="1939" time="0" location="/Users/moole04/.ivy2/cache/scala_2.10/sbt_0.13/org.jetbrains/sbt-structure-extractor/ivy-2017.2.xml" searched="false" origin-is-local="false" origin-location="https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.jetbrains/sbt-structure-extractor/scala_2.10/sbt_0.13/2017.2/ivys/ivy.xml"/>
+				<caller organisation="workspace-graph-research" name="workspace-graph-research$sbt_2.10" conf="default" rev="2017.2" rev-constraint-default="2017.2" rev-constraint-dynamic="2017.2" callerrev="1.0" extra-scalaVersion="2.10" extra-sbtVersion="0.13"/>
+				<artifacts>
+					<artifact name="sbt-structure-extractor" type="jar" ext="jar" status="no" details="" size="701295" time="0" location="/Users/moole04/.ivy2/cache/scala_2.10/sbt_0.13/org.jetbrains/sbt-structure-extractor/jars/sbt-structure-extractor-2017.2.jar">
+						<origin-location is-local="false" location="https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.jetbrains/sbt-structure-extractor/scala_2.10/sbt_0.13/2017.2/jars/sbt-structure-extractor.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
 		<module organisation="org.scala-sbt" name="sbt">
 			<revision name="0.13.16" status="release" pubdate="20170726165851" resolver="sbt-chain" artresolver="sbt-chain" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="0">
 				<metadata-artifact status="no" details="" size="1455" time="0" location="/Users/moole04/.ivy2/cache/org.scala-sbt/sbt/ivy-0.13.16.xml" searched="false" origin-is-local="false" origin-location="https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/sbt/0.13.16/ivys/ivy.xml"/>

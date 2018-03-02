@@ -4,7 +4,7 @@
 		module="workspace-graph-research$sources_2.10"
 		revision="1.0"
 		status="integration"
-		publication="20180302135614"
+		publication="20180302141531"
 	/>
 	<configurations>
 		<conf name="default" visibility="public" description=""/>
@@ -12,6 +12,9 @@
 	<publications>
 	</publications>
 	<dependencies>
+		<dependency org="org.jetbrains" name="sbt-structure-extractor" rev="2017.2" transitive="false" conf="default->compile,default(compile)" scalaVersion="2.10" sbtVersion="0.13">
+			<artifact name="sbt-structure-extractor" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+		</dependency>
 		<dependency org="org.scala-sbt" name="collections" rev="0.13.16" transitive="false" conf="default->compile,default(compile)">
 			<artifact name="collections" type="src" ext="jar" conf="sources" e:classifier="sources"/>
 		</dependency>
@@ -53,6 +56,9 @@
 		</dependency>
 		<dependency org="org.scala-sbt" name="compiler-interface" rev="0.13.16" transitive="false" conf="default->compile,default(compile)">
 			<artifact name="compiler-interface" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+		</dependency>
+		<dependency org="org.jetbrains" name="sbt-idea-shell" rev="2017.2" transitive="false" conf="default->compile,default(compile)" scalaVersion="2.10" sbtVersion="0.13">
+			<artifact name="sbt-idea-shell" type="src" ext="jar" conf="sources" e:classifier="sources"/>
 		</dependency>
 		<dependency org="org.scala-sbt" name="tasks" rev="0.13.16" transitive="false" conf="default->compile,default(compile)">
 			<artifact name="tasks" type="src" ext="jar" conf="sources" e:classifier="sources"/>
