@@ -22,7 +22,7 @@ apoc.import.file.enabled=true
 
 <b>Download:</b>
 
-Download the jar file from [here](https://www.dropbox.com/s/pjnin9vxssy6b2s/gbad2neo4j.jar?dl=0).
+Download jar file from [here](https://www.dropbox.com/s/pjnin9vxssy6b2s/gbad2neo4j.jar?dl=0).
 
 <b>Usage:</b> 
 
