@@ -386,7 +386,7 @@ object Convert_GBAD_2_JSON extends App  {
   // load the configuration file
   val config = ConfigFactory.parseFile(new File(confFile))
 
-  baseFolder = config.getString("Source.GBAD2JSON.baseFolder")
+  baseFolder = config.getString("Source.generic.baseFolder")
   inputFilename = baseFolder + config.getString("Source.GBAD2JSON.inputFilename")
   outputFilename = baseFolder + config.getString("Source.GBAD2JSON.outputFilename")
   JsonType = config.getInt("Source.GBAD2JSON.JsonType")

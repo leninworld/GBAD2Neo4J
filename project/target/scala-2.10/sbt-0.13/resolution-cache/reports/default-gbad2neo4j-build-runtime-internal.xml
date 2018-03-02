@@ -9,87 +9,13 @@
 		extra-sbtVersion="0.13"
 		conf="runtime-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20170826121204"/>
+		date="20180302135605"/>
 	<dependencies>
 		<module organisation="org.scala-sbt" name="global-plugins">
-			<revision name="0.0" status="integration" pubdate="20170826121159" resolver="inter-project" artresolver="inter-project" extra-scalaVersion="2.10" extra-sbtVersion="0.13" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="0">
+			<revision name="0.0" status="integration" pubdate="20180302135602" resolver="inter-project" artresolver="inter-project" extra-scalaVersion="2.10" extra-sbtVersion="0.13" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="0">
 				<metadata-artifact status="failed" details="" size="0" time="0" searched="false"/>
 				<caller organisation="default" name="gbad2neo4j-build" conf="compile, runtime-internal, runtime, optional" rev="0.0" rev-constraint-default="0.0" rev-constraint-dynamic="0.0" callerrev="0.1-SNAPSHOT" extra-scalaVersion="2.10" extra-sbtVersion="0.13"/>
 				<artifacts>
-				</artifacts>
-			</revision>
-		</module>
-		<module organisation="com.typesafe.sbteclipse" name="sbteclipse-plugin">
-			<revision name="5.2.1" status="release" pubdate="20170815211558" resolver="sbt-chain" artresolver="sbt-chain" extra-scalaVersion="2.10" extra-sbtVersion="0.13" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="3">
-				<license name="Apache-2.0" url="https://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="no" details="" size="1673" time="0" location="/Users/lenin/.ivy2/cache/scala_2.10/sbt_0.13/com.typesafe.sbteclipse/sbteclipse-plugin/ivy-5.2.1.xml" searched="false" origin-is-local="false" origin-location="https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbteclipse/sbteclipse-plugin/scala_2.10/sbt_0.13/5.2.1/ivys/ivy.xml"/>
-				<caller organisation="org.scala-sbt" name="global-plugins" conf="compile" rev="5.2.1" rev-constraint-default="5.2.1" rev-constraint-dynamic="5.2.1" callerrev="0.0" extra-scalaVersion="2.10" extra-sbtVersion="0.13"/>
-				<artifacts>
-					<artifact name="sbteclipse-plugin" type="jar" ext="jar" status="no" details="" size="347235" time="0" location="/Users/lenin/.ivy2/cache/scala_2.10/sbt_0.13/com.typesafe.sbteclipse/sbteclipse-plugin/jars/sbteclipse-plugin-5.2.1.jar">
-						<origin-location is-local="false" location="https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbteclipse/sbteclipse-plugin/scala_2.10/sbt_0.13/5.2.1/jars/sbteclipse-plugin.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
-		<module organisation="org.scalaz" name="scalaz-effect_2.10">
-			<revision name="7.2.14" status="release" pubdate="20170625021453" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://scalaz.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="6">
-				<license name="BSD-style" url="http://opensource.org/licenses/BSD-3-Clause"/>
-				<metadata-artifact status="no" details="" size="2792" time="0" location="/Users/lenin/.ivy2/cache/org.scalaz/scalaz-effect_2.10/ivy-7.2.14.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scalaz/scalaz-effect_2.10/7.2.14/scalaz-effect_2.10-7.2.14.pom"/>
-				<caller organisation="com.typesafe.sbteclipse" name="sbteclipse-plugin" conf="compile" rev="7.2.14" rev-constraint-default="7.2.14" rev-constraint-dynamic="7.2.14" callerrev="5.2.1"/>
-				<artifacts>
-					<artifact name="scalaz-effect_2.10" type="bundle" ext="jar" status="no" details="" size="402969" time="0" location="/Users/lenin/.ivy2/cache/org.scalaz/scalaz-effect_2.10/bundles/scalaz-effect_2.10-7.2.14.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scalaz/scalaz-effect_2.10/7.2.14/scalaz-effect_2.10-7.2.14.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
-		<module organisation="org.scalaz" name="scalaz-core_2.10">
-			<revision name="7.2.14" status="release" pubdate="20170625021527" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://scalaz.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="4">
-				<license name="BSD-style" url="http://opensource.org/licenses/BSD-3-Clause"/>
-				<metadata-artifact status="no" details="" size="2640" time="0" location="/Users/lenin/.ivy2/cache/org.scalaz/scalaz-core_2.10/ivy-7.2.14.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scalaz/scalaz-core_2.10/7.2.14/scalaz-core_2.10-7.2.14.pom"/>
-				<caller organisation="com.typesafe.sbteclipse" name="sbteclipse-plugin" conf="compile" rev="7.2.14" rev-constraint-default="7.2.14" rev-constraint-dynamic="7.2.14" callerrev="5.2.1"/>
-				<caller organisation="org.scalaz" name="scalaz-effect_2.10" conf="default, compile, runtime, master" rev="7.2.14" rev-constraint-default="7.2.14" rev-constraint-dynamic="7.2.14" callerrev="7.2.14"/>
-				<artifacts>
-					<artifact name="scalaz-core_2.10" type="bundle" ext="jar" status="no" details="" size="10860884" time="0" location="/Users/lenin/.ivy2/cache/org.scalaz/scalaz-core_2.10/bundles/scalaz-core_2.10-7.2.14.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scalaz/scalaz-core_2.10/7.2.14/scalaz-core_2.10-7.2.14.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
-		<module organisation="com.github.mpeltonen" name="sbt-idea">
-			<revision name="1.7.0-SNAPSHOT" status="integration" pubdate="20140801135030" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://your.project.url" extra-scalaVersion="2.10" extra-sbtVersion="0.13" downloaded="false" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="1">
-				<license name="BSD-style" url="http://www.opensource.org/licenses/BSD-3-Clause"/>
-				<metadata-artifact status="no" details="" size="3567" time="0" location="/Users/lenin/.ivy2/cache/scala_2.10/sbt_0.13/com.github.mpeltonen/sbt-idea/ivy-1.7.0-SNAPSHOT.xml" searched="true" origin-is-local="false" origin-location="https://oss.sonatype.org/content/repositories/snapshots/com/github/mpeltonen/sbt-idea_2.10_0.13/1.7.0-SNAPSHOT/sbt-idea-1.7.0-SNAPSHOT.pom"/>
-				<caller organisation="org.scala-sbt" name="global-plugins" conf="compile" rev="1.7.0-SNAPSHOT" rev-constraint-default="1.7.0-SNAPSHOT" rev-constraint-dynamic="1.7.0-SNAPSHOT" callerrev="0.0" extra-scalaVersion="2.10" extra-sbtVersion="0.13"/>
-				<artifacts>
-					<artifact name="sbt-idea" type="jar" ext="jar" status="no" details="" size="370956" time="0" location="/Users/lenin/.ivy2/cache/scala_2.10/sbt_0.13/com.github.mpeltonen/sbt-idea/jars/sbt-idea-1.7.0-SNAPSHOT.jar">
-						<origin-location is-local="false" location="https://oss.sonatype.org/content/repositories/snapshots/com/github/mpeltonen/sbt-idea_2.10_0.13/1.7.0-SNAPSHOT/sbt-idea-1.7.0-SNAPSHOT.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
-		<module organisation="commons-io" name="commons-io">
-			<revision name="2.4" status="release" pubdate="20120612172206" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/io/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="2">
-				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="8704" time="0" location="/Users/lenin/.ivy2/cache/commons-io/commons-io/ivy-2.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/commons-io/commons-io/2.4/commons-io-2.4.pom"/>
-				<caller organisation="com.github.mpeltonen" name="sbt-idea" conf="default, compile, runtime, master" rev="2.4" rev-constraint-default="2.4" rev-constraint-dynamic="2.4" callerrev="1.7.0-SNAPSHOT"/>
-				<artifacts>
-					<artifact name="commons-io" type="jar" ext="jar" status="no" details="" size="185140" time="0" location="/Users/lenin/.ivy2/cache/commons-io/commons-io/jars/commons-io-2.4.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/commons-io/commons-io/2.4/commons-io-2.4.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
-		<module organisation="org.scala-lang" name="scala-library">
-			<revision name="2.10.6" status="release" pubdate="20150918053528" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.10.6/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="5">
-				<license name="BSD-like" url="http://www.scala-lang.org/downloads/license.html          "/>
-				<metadata-artifact status="no" details="" size="2487" time="0" location="/Users/lenin/.ivy2/cache/org.scala-lang/scala-library/ivy-2.10.6.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.pom"/>
-				<caller organisation="org.scalaz" name="scalaz-effect_2.10" conf="default, compile, runtime, master" rev="2.10.6" rev-constraint-default="2.10.6" rev-constraint-dynamic="2.10.6" callerrev="7.2.14"/>
-				<caller organisation="org.scalaz" name="scalaz-core_2.10" conf="default, compile, runtime, master" rev="2.10.6" rev-constraint-default="2.10.6" rev-constraint-dynamic="2.10.6" callerrev="7.2.14"/>
-				<artifacts>
-					<artifact name="scala-library" type="jar" ext="jar" status="no" details="" size="7132001" time="0" location="/Users/lenin/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.10.6.jar">
-						<origin-location is-local="false" location="UNKNOWN"/>
-					</artifact>
 				</artifacts>
 			</revision>
 		</module>

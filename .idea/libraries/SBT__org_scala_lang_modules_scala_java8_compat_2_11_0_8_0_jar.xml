@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="SBT: org.scala-lang.modules:scala-java8-compat_2.11:0.8.0:jar">
+  <library name="sbt: org.scala-lang.modules:scala-java8-compat_2.11:0.8.0:jar">
     <CLASSES>
       <root url="jar://$USER_HOME$/.ivy2/cache/org.scala-lang.modules/scala-java8-compat_2.11/bundles/scala-java8-compat_2.11-0.8.0.jar!/" />
     </CLASSES>

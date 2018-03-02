@@ -35,7 +35,7 @@ object main extends App  {
 
 //  val input = scala.io.StdIn.readLine()
 
-  if (args.length <= 2 ) {
+  if (args.length < 2 ) {
     println("Hello, I need at least two parameter!!!")
     System.exit(1)
   }
@@ -49,7 +49,7 @@ object main extends App  {
   // GBAD to Neo4J output
   if(input == 1) {
     println("Running GBAD to Neo4J conversion....." )
-    baseFolder = config.getString("Source.GBAD2Neo4J.baseFolder")
+    baseFolder = config.getString("Source.generic.baseFolder")
     inputFilename = baseFolder + config.getString("Source.GBAD2Neo4J.inputFilename")
     outputFilename = baseFolder + config.getString("Source.GBAD2Neo4J.outputFilename")
     isSOPprint = config.getInt("Source.isSOPprint") //debug => 1 = level 1 debug
@@ -64,7 +64,7 @@ object main extends App  {
   // run GBAD to JSON output
   if(input == 2) {
     println("Running GBAD to JSON conversion....." )
-    baseFolder = config.getString("Source.GBAD2JSON.baseFolder")
+    baseFolder = config.getString("Source.generic.baseFolder")
     inputFilename = baseFolder + config.getString("Source.GBAD2JSON.inputFilename")
     outputFilename = baseFolder + config.getString("Source.GBAD2JSON.outputFilename")
     JsonType = config.getInt("Source.GBAD2JSON.JsonType")

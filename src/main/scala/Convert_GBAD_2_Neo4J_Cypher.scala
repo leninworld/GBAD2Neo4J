@@ -194,12 +194,12 @@ object Convert_GBAD_2_Neo4J_Cypher{
   // print SOP = {1,2}
   var isSOPprint:Int = -1
 
-  var confFile = "/Users/lenin/Dropbox/GBAD2Neo4J/conf/application.conf"
+  var confFile = "/Users/Downloads/important/GBAD2Neo4J/conf/application.conf"
 
   // load the configuration file
   val config = ConfigFactory.parseFile(new File(confFile))
 
-      baseFolder = config.getString("Source.GBAD2Neo4J.baseFolder")
+      baseFolder = config.getString("Source.generic.baseFolder")
       inputFilename = baseFolder + config.getString("Source.GBAD2Neo4J.inputFilename")
       outputFilename = baseFolder + config.getString("Source.GBAD2Neo4J.outputFilename")
       isSOPprint = config.getInt("Source.isSOPprint") //debug => 1 = level 1 debug
