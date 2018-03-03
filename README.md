@@ -13,11 +13,12 @@ GBAD is a graph-based library developed by Dr. William (Bill) Eberle from Tennes
 
 2) Setup the plugin folder in neo4j.conf.
 
-dbms.directories.plugins=<path_for_plugin_folder>
+      dbms.directories.plugins=<path_for_plugin_folder>
 
 3) Setup the import file configuration in neo4j.conf.
 
-apoc.import.file.enabled=true
+      apoc.import.file.enabled=true
+
 4) Restart neo4j service.
 
 <b>Download:</b>
