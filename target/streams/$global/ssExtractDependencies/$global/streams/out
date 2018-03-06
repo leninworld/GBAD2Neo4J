@@ -1,4 +1,4 @@
-sbt.ResolveException: unresolved dependency: com.typesafe.play#play_2.12;2.2.2: not found
+sbt.ResolveException: unresolved dependency: com.typesafe.play#play-json_2.12;2.6.12: not found
 	at sbt.IvyActions$.sbt$IvyActions$$resolve(IvyActions.scala:313)
 	at sbt.IvyActions$$anonfun$updateEither$1.apply(IvyActions.scala:191)
 	at sbt.IvyActions$$anonfun$updateEither$1.apply(IvyActions.scala:168)
@@ -49,4 +49,4 @@ sbt.ResolveException: unresolved dependency: com.typesafe.play#play_2.12;2.2.2: 
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
-[error] (*:ssExtractDependencies) sbt.ResolveException: unresolved dependency: com.typesafe.play#play_2.12;2.2.2: not found
+[0m[[31merror[0m] [0m(*:[31mssExtractDependencies[0m) sbt.ResolveException: unresolved dependency: com.typesafe.play#play-json_2.12;2.6.12: not found[0m

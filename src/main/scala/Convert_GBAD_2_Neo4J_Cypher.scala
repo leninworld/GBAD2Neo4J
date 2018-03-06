@@ -8,6 +8,11 @@ import java.io.PrintWriter
 import Convert_GBAD_2_JSON.baseFolder
 import Convert_GBAD_2_Neo4J_Cypher.isSOPprint
 import com.typesafe.config.ConfigFactory
+import scala.util.parsing.json._
+import play.api.libs.json.{JsValue, Json}
+import com.google.gson.Gson
+import play.api.libs.json._
+
 
 import scala.util.Try
 
@@ -18,6 +23,10 @@ import scala.util.Try
 * */
 
 object Convert_GBAD_2_Neo4J_Cypher{
+
+  case class Person(firstName: String, lastName: String, age: Int)
+
+  def printType[T](x:T) :Unit = {println(x.getClass.toString())}
 
   // process and return create nodes and edges line for .csql
   def createNodesAndEdges(counterForXP:Integer ,
@@ -97,7 +106,7 @@ object Convert_GBAD_2_Neo4J_Cypher{
       var currSourceNodeNameInteger :Integer = 0
       var currDestinationNodeNameInteger :Integer = 0
       var conccurrCSQLstatement = ""
-
+      var line = ""
       // read each line
       for (line <- Source.fromFile(inFile).getLines) {
         //
@@ -107,7 +116,36 @@ object Convert_GBAD_2_Neo4J_Cypher{
           counterForXP += 1
           arrVertexIDandName = new scala.collection.mutable.ArrayBuffer[String]()
         }
-        var arr = line.split("\\s+")
+
+        var test = """{"Name":"abc", "age":10}"""
+        val json2: JsValue = Json.parse(test)
+        print("test22:"+json2)
+        val lat = (json2 \ "Name").get
+        var currRegularString = ""
+        var currJson_NodeAttributes = ""
+        print("lat:"+lat)
+        //
+        if(line.indexOf("\"{") >= 0){
+          var beginIdx = line.indexOf("\"{")
+          currJson_NodeAttributes = line.substring(beginIdx+1, line.length)
+          currRegularString = line.substring(0, beginIdx+1)
+          print("\n beginIdx:"+beginIdx+" currJson_NodeAttributes:"+currJson_NodeAttributes+" currRegularString:"+currRegularString+"\n")
+          val json2: JsValue = Json.parse(currJson_NodeAttributes)
+          val lat = (json2 \ "Name").get
+          print("lat2:"+lat)
+        }
+        else{
+          currJson_NodeAttributes = ""
+          currRegularString = ""
+        }
+        var arr = new Array[String](1)
+
+        if(currRegularString.length > 0){
+          arr = currRegularString.split("\\s+")
+        }
+        else {
+          arr = line.split("\\s+")
+        }
         //          arrVertexIDandName = new scala.collection.mutable.ArrayBuffer[String]()
 
         // vertex
@@ -164,7 +202,6 @@ object Convert_GBAD_2_Neo4J_Cypher{
         println("last counterForXP:" + counterForXP +   " arrVertexIDandName.size:"+arrVertexIDandName.size)
 
 
-
 //      currCSQLstatement = createNodesAndEdges(counterForXP,
 //                                              currSourceNode,
 //                                              currDestinationNode,
@@ -201,14 +238,14 @@ object Convert_GBAD_2_Neo4J_Cypher{
   // load the configuration file
   val config = ConfigFactory.parseFile(new File(confFile))
 
-      baseFolder = config.getString("Source.generic.baseFolder")
-      inputFilename = baseFolder + config.getString("Source.GBAD2Neo4J.inputFilename")
-      outputFilename = baseFolder + config.getString("Source.GBAD2Neo4J.outputFilename")
-      isSOPprint = config.getInt("Source.isSOPprint") //debug => 1 = level 1 debug
-
-  println("<!--^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^--> read from config ( for Cypher out ) ")
-  println( "baseFolder:" + baseFolder +"\ninputFilename:" + inputFilename + "\noutputFilename:"+outputFilename )
-  println("<!--^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^-->")
+//      baseFolder = config.getString("Source.generic.baseFolder")
+//      inputFilename = baseFolder + config.getString("Source.GBAD2Neo4J.inputFilename")
+//      outputFilename = baseFolder + config.getString("Source.GBAD2Neo4J.outputFilename")
+//      isSOPprint = config.getInt("Source.isSOPprint") //debug => 1 = level 1 debug
+//
+//  println("<!--^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^--> read from config ( for Cypher out ) ")
+//  println( "baseFolder:" + baseFolder +"\ninputFilename:" + inputFilename + "\noutputFilename:"+outputFilename )
+//  println("<!--^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^-->")
 
   // convert GBAD to Neo4J
 //  Convert_GBAD_2_Neo4J_Cypherfn(inputFilename, outputFilename, isSOPprint)
