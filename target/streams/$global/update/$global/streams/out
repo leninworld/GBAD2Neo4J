@@ -1,4 +1,5 @@
-[0m[[0minfo[0m] [0mUpdating {file:/Users/lenin/Dropbox/workspace_workplace/GBAD2Neo4J/}gbad2neo4j...[0m
+[0m[[0minfo[0m] [0mUpdating {file:/Users/lenin/workspace_workplace/GBAD2Neo4J/}gbad2neo4j...[0m
+[0m[[0mdebug[0m] [0mno default cache defined: set to /Users/moole04/.ivy2/cache[0m
 [0m[[0mdebug[0m] [0m:: resolving dependencies :: workspace-graph-research#workspace-graph-research_2.12;1.0[0m
 [0m[[0mdebug[0m] [0m	confs: [compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool][0m
 [0m[[0mdebug[0m] [0m	validate = true[0m
@@ -85,7 +86,6 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]} => dependency: org.scala-lang#scala-xml;2.11.0-M4 {compile=[default(compile)]}[0m
 [0m[[0minfo[0m] [0mResolving org.scalaj#scalaj-http_2.12;2.3.0 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scalaj#scalaj-http_2.12;2.3.0 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0mno default cache defined: set to /Users/moole04/.ivy2/cache[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scalaj#scalaj-http_2.12;2.3.0[0m
 [0m[[0mdebug[0m] [0m	found org.scalaj#scalaj-http_2.12;2.3.0 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies workspace-graph-research#workspace-graph-research_2.12;1.0->org.scalaj#scalaj-http_2.12;2.3.0 [compile->runtime][0m
@@ -10444,19 +10444,19 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.codehaus.mojo#animal-sniffer-annotations;1.14!animal-sniffer-annotations.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-compiler;2.12.3!scala-compiler.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] jline#jline;2.14.4!jline.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 2749ms :: artifacts dl 84ms[0m
-[0m[[0mdebug[0m] [0m	report for workspace-graph-research#workspace-graph-research_2.12;1.0 compile produced in /Users/lenin/Dropbox/workspace_workplace/GBAD2Neo4J/target/scala-2.12/resolution-cache/reports/workspace-graph-research-workspace-graph-research_2.12-compile.xml[0m
-[0m[[0mdebug[0m] [0m	report for workspace-graph-research#workspace-graph-research_2.12;1.0 runtime produced in /Users/lenin/Dropbox/workspace_workplace/GBAD2Neo4J/target/scala-2.12/resolution-cache/reports/workspace-graph-research-workspace-graph-research_2.12-runtime.xml[0m
-[0m[[0mdebug[0m] [0m	report for workspace-graph-research#workspace-graph-research_2.12;1.0 test produced in /Users/lenin/Dropbox/workspace_workplace/GBAD2Neo4J/target/scala-2.12/resolution-cache/reports/workspace-graph-research-workspace-graph-research_2.12-test.xml[0m
-[0m[[0mdebug[0m] [0m	report for workspace-graph-research#workspace-graph-research_2.12;1.0 provided produced in /Users/lenin/Dropbox/workspace_workplace/GBAD2Neo4J/target/scala-2.12/resolution-cache/reports/workspace-graph-research-workspace-graph-research_2.12-provided.xml[0m
-[0m[[0mdebug[0m] [0m	report for workspace-graph-research#workspace-graph-research_2.12;1.0 optional produced in /Users/lenin/Dropbox/workspace_workplace/GBAD2Neo4J/target/scala-2.12/resolution-cache/reports/workspace-graph-research-workspace-graph-research_2.12-optional.xml[0m
-[0m[[0mdebug[0m] [0m	report for workspace-graph-research#workspace-graph-research_2.12;1.0 compile-internal produced in /Users/lenin/Dropbox/workspace_workplace/GBAD2Neo4J/target/scala-2.12/resolution-cache/reports/workspace-graph-research-workspace-graph-research_2.12-compile-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for workspace-graph-research#workspace-graph-research_2.12;1.0 runtime-internal produced in /Users/lenin/Dropbox/workspace_workplace/GBAD2Neo4J/target/scala-2.12/resolution-cache/reports/workspace-graph-research-workspace-graph-research_2.12-runtime-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for workspace-graph-research#workspace-graph-research_2.12;1.0 test-internal produced in /Users/lenin/Dropbox/workspace_workplace/GBAD2Neo4J/target/scala-2.12/resolution-cache/reports/workspace-graph-research-workspace-graph-research_2.12-test-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for workspace-graph-research#workspace-graph-research_2.12;1.0 plugin produced in /Users/lenin/Dropbox/workspace_workplace/GBAD2Neo4J/target/scala-2.12/resolution-cache/reports/workspace-graph-research-workspace-graph-research_2.12-plugin.xml[0m
-[0m[[0mdebug[0m] [0m	report for workspace-graph-research#workspace-graph-research_2.12;1.0 sources produced in /Users/lenin/Dropbox/workspace_workplace/GBAD2Neo4J/target/scala-2.12/resolution-cache/reports/workspace-graph-research-workspace-graph-research_2.12-sources.xml[0m
-[0m[[0mdebug[0m] [0m	report for workspace-graph-research#workspace-graph-research_2.12;1.0 docs produced in /Users/lenin/Dropbox/workspace_workplace/GBAD2Neo4J/target/scala-2.12/resolution-cache/reports/workspace-graph-research-workspace-graph-research_2.12-docs.xml[0m
-[0m[[0mdebug[0m] [0m	report for workspace-graph-research#workspace-graph-research_2.12;1.0 pom produced in /Users/lenin/Dropbox/workspace_workplace/GBAD2Neo4J/target/scala-2.12/resolution-cache/reports/workspace-graph-research-workspace-graph-research_2.12-pom.xml[0m
-[0m[[0mdebug[0m] [0m	report for workspace-graph-research#workspace-graph-research_2.12;1.0 scala-tool produced in /Users/lenin/Dropbox/workspace_workplace/GBAD2Neo4J/target/scala-2.12/resolution-cache/reports/workspace-graph-research-workspace-graph-research_2.12-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (2749ms resolve - 84ms download)[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 2977ms :: artifacts dl 118ms[0m
+[0m[[0mdebug[0m] [0m	report for workspace-graph-research#workspace-graph-research_2.12;1.0 compile produced in /Users/lenin/workspace_workplace/GBAD2Neo4J/target/scala-2.12/resolution-cache/reports/workspace-graph-research-workspace-graph-research_2.12-compile.xml[0m
+[0m[[0mdebug[0m] [0m	report for workspace-graph-research#workspace-graph-research_2.12;1.0 runtime produced in /Users/lenin/workspace_workplace/GBAD2Neo4J/target/scala-2.12/resolution-cache/reports/workspace-graph-research-workspace-graph-research_2.12-runtime.xml[0m
+[0m[[0mdebug[0m] [0m	report for workspace-graph-research#workspace-graph-research_2.12;1.0 test produced in /Users/lenin/workspace_workplace/GBAD2Neo4J/target/scala-2.12/resolution-cache/reports/workspace-graph-research-workspace-graph-research_2.12-test.xml[0m
+[0m[[0mdebug[0m] [0m	report for workspace-graph-research#workspace-graph-research_2.12;1.0 provided produced in /Users/lenin/workspace_workplace/GBAD2Neo4J/target/scala-2.12/resolution-cache/reports/workspace-graph-research-workspace-graph-research_2.12-provided.xml[0m
+[0m[[0mdebug[0m] [0m	report for workspace-graph-research#workspace-graph-research_2.12;1.0 optional produced in /Users/lenin/workspace_workplace/GBAD2Neo4J/target/scala-2.12/resolution-cache/reports/workspace-graph-research-workspace-graph-research_2.12-optional.xml[0m
+[0m[[0mdebug[0m] [0m	report for workspace-graph-research#workspace-graph-research_2.12;1.0 compile-internal produced in /Users/lenin/workspace_workplace/GBAD2Neo4J/target/scala-2.12/resolution-cache/reports/workspace-graph-research-workspace-graph-research_2.12-compile-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for workspace-graph-research#workspace-graph-research_2.12;1.0 runtime-internal produced in /Users/lenin/workspace_workplace/GBAD2Neo4J/target/scala-2.12/resolution-cache/reports/workspace-graph-research-workspace-graph-research_2.12-runtime-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for workspace-graph-research#workspace-graph-research_2.12;1.0 test-internal produced in /Users/lenin/workspace_workplace/GBAD2Neo4J/target/scala-2.12/resolution-cache/reports/workspace-graph-research-workspace-graph-research_2.12-test-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for workspace-graph-research#workspace-graph-research_2.12;1.0 plugin produced in /Users/lenin/workspace_workplace/GBAD2Neo4J/target/scala-2.12/resolution-cache/reports/workspace-graph-research-workspace-graph-research_2.12-plugin.xml[0m
+[0m[[0mdebug[0m] [0m	report for workspace-graph-research#workspace-graph-research_2.12;1.0 sources produced in /Users/lenin/workspace_workplace/GBAD2Neo4J/target/scala-2.12/resolution-cache/reports/workspace-graph-research-workspace-graph-research_2.12-sources.xml[0m
+[0m[[0mdebug[0m] [0m	report for workspace-graph-research#workspace-graph-research_2.12;1.0 docs produced in /Users/lenin/workspace_workplace/GBAD2Neo4J/target/scala-2.12/resolution-cache/reports/workspace-graph-research-workspace-graph-research_2.12-docs.xml[0m
+[0m[[0mdebug[0m] [0m	report for workspace-graph-research#workspace-graph-research_2.12;1.0 pom produced in /Users/lenin/workspace_workplace/GBAD2Neo4J/target/scala-2.12/resolution-cache/reports/workspace-graph-research-workspace-graph-research_2.12-pom.xml[0m
+[0m[[0mdebug[0m] [0m	report for workspace-graph-research#workspace-graph-research_2.12;1.0 scala-tool produced in /Users/lenin/workspace_workplace/GBAD2Neo4J/target/scala-2.12/resolution-cache/reports/workspace-graph-research-workspace-graph-research_2.12-scala-tool.xml[0m
+[0m[[0mdebug[0m] [0m	resolve done (2977ms resolve - 118ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m

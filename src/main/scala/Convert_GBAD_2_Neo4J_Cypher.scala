@@ -160,8 +160,16 @@ object Convert_GBAD_2_Neo4J_Cypher{
               else if(currVertexName.indexOf("idx:") >= 0)
                 currVertexName = currVertexName.substring(currVertexName.indexOf("idx:")+4, currVertexName.length())
 
-              //create nodes
-              writer.append("CREATE (n1:XP"+counterForXP+" {id:\""+currVertexID+"XP"+counterForXP+"\", name:\""+currVertexName+"\"});\n")
+
+              // if attributes are given for this curr vertex
+              if(currJson_NodeAttributes.length > 0){
+                writer.append("CREATE (n1:XP" + counterForXP + " {id:\"" + currVertexID + "XP" + counterForXP + "\", name:\"" + currVertexName + "\"," +
+                  currJson_NodeAttributes.substring(1,currJson_NodeAttributes.length) + ");\n")
+              }
+              else {
+                  //create nodes
+                  writer.append("CREATE (n1:XP" + counterForXP + " {id:\"" + currVertexID + "XP" + counterForXP + "\", name:\"" + currVertexName + "\"});\n")
+              }
               writer.flush()
 
           //            println("vertexID:" + currVertexID + " vertexName:" + currVertexName.replaceAll("\"","")

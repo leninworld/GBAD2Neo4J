@@ -4,7 +4,7 @@
 		module="workspace-graph-research$sources_2.12"
 		revision="1.0"
 		status="integration"
-		publication="20180306100913"
+		publication="20180306111954"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>
