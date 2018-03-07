@@ -41,3 +41,5 @@ all {file:/Users/moole04/Dropbox/workspace_workplace/GBAD2Neo4J/}gbad2neo4j/prod
 all {file:/Users/lenin/Dropbox/workspace_workplace/GBAD2Neo4J/}gbad2neo4j/products {file:/Users/lenin/Dropbox/workspace_workplace/GBAD2Neo4J/}gbad2neo4j/test:products
 ;reload; set _root_.org.jetbrains.sbt.StructureKeys.sbtStructureOptions in Global := "download resolveClassifiers resolveSbtClassifiers" ;*/*:dumpStructureTo /private/var/folders/9l/m6vzd3hd0yd6m_x_1wkr9rq96fhvgx/T/sbt-structure.xml; session clear-all
 all {file:/Users/lenin/workspace_workplace/GBAD2Neo4J/}gbad2neo4j/products {file:/Users/lenin/workspace_workplace/GBAD2Neo4J/}gbad2neo4j/test:products
+;reload; set org.jetbrains.sbt.StructureKeys.sbtStructureOptions in Global := "download resolveClassifiers resolveSbtClassifiers" ;*/*:dumpStructureTo /private/var/folders/nj/fz28chyd2xbc08pjdqcb6hr00000gn/T/sbt-structure.xml
+all {file:/Users/lenin/Dropbox/workspace_workplace/GBAD2Neo4J/}gbad2neo4j/products {file:/Users/lenin/Dropbox/workspace_workplace/GBAD2Neo4J/}gbad2neo4j/test:products

@@ -1,8 +1,8 @@
 XP # 1
-v 1 "Integrity"{"Name":"Lenin", "StreetNumber":12}
+v 1 "Integrity"{"Name":"Lenin","StreetNumber":12}
 v 2 "Intelligent"
 v 3 "Energy"
-d 1 2 "with"
+d 1 2 "with"{"Name":"Lenin","StreetNumber":12}
 d 2 3 "with"
 d 3 1 "with"
 XP # 2

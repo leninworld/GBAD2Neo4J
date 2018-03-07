@@ -35,7 +35,8 @@ object Convert_GBAD_2_Neo4J_Cypher{
                           currEdge: String,
                           arrVertexIDandName:ArrayBuffer[String],
                           currSourceNodeNameInteger: Integer,
-                          currDestinationNodeNameInteger: Integer
+                          currDestinationNodeNameInteger: Integer,
+                          currJson_NodeAttributes: String
                          ): String = {
     try {
 
@@ -63,17 +64,23 @@ object Convert_GBAD_2_Neo4J_Cypher{
       else if(isInteger==true){ //check if its integer value
         //        println("isInteger:"+isInteger+" "+currEdge)
         if(isInteger){
-          newEdge = "label {val:" + currEdge + "}"
+          if(currJson_NodeAttributes.length > 0)
+            newEdge = "label {val:" + currEdge +","+ currJson_NodeAttributes.replace("{","").replace("}","") + "}"
+          else
+            newEdge = "label {val:" + currEdge + "}"
         }
       }
       else{
+        if(currJson_NodeAttributes.length > 0)
+          newEdge = currEdge+" "+ currJson_NodeAttributes
+        else
           newEdge = currEdge
       }
 
       var xpStringSource = currSourceNode + "XP" +counterForXP
       var xpStringDestination = currDestinationNode + "XP" +counterForXP
-
-      var outString: String = s"""MATCH (n1:XP$counterForXP {id:"$xpStringSource"}),(n2:XP$counterForXP {id:"$xpStringDestination"}) CREATE (n1)-[:$newEdge]->(n2);\n"""
+      var outString:String = ""
+      outString = s"""MATCH (n1:XP$counterForXP {id:"$xpStringSource"}),(n2:XP$counterForXP {id:"$xpStringDestination"}) CREATE (n1)-[:$newEdge]->(n2);\n"""
 
       if(isSOPprint == 1)
         println(outString+"<---")
@@ -85,7 +92,12 @@ object Convert_GBAD_2_Neo4J_Cypher{
     }
     return ""
   }
-
+  //  get all keys for the given json
+  def allKeys(json: JsValue): collection.Set[String] = json match {
+    case o: JsObject => o.keys ++ o.values.flatMap(allKeys)
+    case JsArray(as) => as.flatMap(allKeys).toSet
+    case _ => Set()
+  }
   // convert GBAD to Neo4J
   def Convert_GBAD_2_Neo4J_Cypherfn(inFile:String, outFile:String, isSOPprint: Int): Unit = {
     try{
@@ -124,6 +136,7 @@ object Convert_GBAD_2_Neo4J_Cypher{
         var currRegularString = ""
         var currJson_NodeAttributes = ""
         print("lat:"+lat)
+        var concJson = ""
         //
         if(line.indexOf("\"{") >= 0){
           var beginIdx = line.indexOf("\"{")
@@ -131,12 +144,28 @@ object Convert_GBAD_2_Neo4J_Cypher{
           currRegularString = line.substring(0, beginIdx+1)
           print("\n beginIdx:"+beginIdx+" currJson_NodeAttributes:"+currJson_NodeAttributes+" currRegularString:"+currRegularString+"\n")
           val json2: JsValue = Json.parse(currJson_NodeAttributes)
+
+          var allkeysJson = allKeys(json2)
+          print("allkeysJson:"+allkeysJson)
+          var concJson = ""
+          allkeysJson.foreach((i:String)=> {
+            val currVal = (json2 \ i ).get
+            print("\n i:"+i)
+            if(concJson.length == 0)
+              concJson = i.replace("\"","") +":" +currVal
+            else
+              concJson = concJson +","+i.replace("\"","") +":" +currVal
+          })
+          concJson="{"+concJson+"}"
+          print("concJson:"+concJson)
+          currJson_NodeAttributes = concJson //reassign
           val lat = (json2 \ "Name").get
           print("lat2:"+lat)
         }
         else{
           currJson_NodeAttributes = ""
           currRegularString = ""
+          concJson = ""
         }
         var arr = new Array[String](1)
 
@@ -161,7 +190,7 @@ object Convert_GBAD_2_Neo4J_Cypher{
                 currVertexName = currVertexName.substring(currVertexName.indexOf("idx:")+4, currVertexName.length())
 
 
-              // if attributes are given for this curr vertex
+              // if additional attributes are given for this curr vertex
               if(currJson_NodeAttributes.length > 0){
                 writer.append("CREATE (n1:XP" + counterForXP + " {id:\"" + currVertexID + "XP" + counterForXP + "\", name:\"" + currVertexName + "\"," +
                   currJson_NodeAttributes.substring(1,currJson_NodeAttributes.length) + ");\n")
@@ -193,7 +222,8 @@ object Convert_GBAD_2_Neo4J_Cypher{
                                                   currEdge,
                                                   arrVertexIDandName,
                                                   currSourceNodeNameInteger,
-                                                  currDestinationNodeNameInteger
+                                                  currDestinationNodeNameInteger,
+                                                  currJson_NodeAttributes
                                                 )
 
           if(isSOPprint == 1)

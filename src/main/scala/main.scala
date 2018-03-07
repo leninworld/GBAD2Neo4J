@@ -21,7 +21,7 @@ object main extends App  {
   var isSOPprint:Int = -1
   var JsonType:Int = -1 // can be {1,2}
   // configuration file
-  var confFile = "/Users/moole04/Dropbox/workspace_workplace/GBAD2Neo4J/conf/application.conf"
+  var confFile = "/Users/lenin/Dropbox/workspace_workplace/GBAD2Neo4J/conf/application.conf"
 
   println("/**********************************************************/")
   println("Usage: " + "java -jar gbad2neo4j.jar <Option> <ConfigFile>")

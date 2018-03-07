@@ -4,7 +4,7 @@
 		module="workspace-graph-research$sources_2.10"
 		revision="1.0"
 		status="integration"
-		publication="20180306111954"
+		publication="20180306194323"
 	/>
 	<configurations>
 		<conf name="default" visibility="public" description=""/>
@@ -12,9 +12,6 @@
 	<publications>
 	</publications>
 	<dependencies>
-		<dependency org="org.jetbrains" name="sbt-structure-extractor" rev="2017.2" transitive="false" conf="default->compile,default(compile)" scalaVersion="2.10" sbtVersion="0.13">
-			<artifact name="sbt-structure-extractor" type="src" ext="jar" conf="sources" e:classifier="sources"/>
-		</dependency>
 		<dependency org="org.scala-sbt" name="collections" rev="0.13.16" transitive="false" conf="default->compile,default(compile)">
 			<artifact name="collections" type="src" ext="jar" conf="sources" e:classifier="sources"/>
 		</dependency>
@@ -33,11 +30,17 @@
 		<dependency org="org.scala-lang.modules" name="scala-pickling_2.10" rev="0.10.1" transitive="false" conf="default->master(*),compile,runtime(*),runtime,compile(*),master">
 			<artifact name="scala-pickling_2.10" type="src" ext="jar" conf="sources" e:classifier="sources"/>
 		</dependency>
+		<dependency org="org.jetbrains" name="sbt-structure-extractor" rev="7.0.0+61-051fb9ba" transitive="false" conf="default->compile,default(compile)" scalaVersion="2.10" sbtVersion="0.13">
+			<artifact name="sbt-structure-extractor" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+		</dependency>
 		<dependency org="org.scala-sbt" name="logic" rev="0.13.16" transitive="false" conf="default->compile,default(compile)">
 			<artifact name="logic" type="src" ext="jar" conf="sources" e:classifier="sources"/>
 		</dependency>
 		<dependency org="org.scala-sbt" name="compiler-ivy-integration" rev="0.13.16" transitive="false" conf="default->compile,default(compile)">
 			<artifact name="compiler-ivy-integration" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+		</dependency>
+		<dependency org="com.github.mpeltonen" name="sbt-idea" rev="1.7.0-SNAPSHOT" transitive="false" conf="default->default,compile,runtime,default(compile),master" scalaVersion="2.10" sbtVersion="0.13">
+			<artifact name="sbt-idea" type="src" ext="jar" conf="sources" e:classifier="sources"/>
 		</dependency>
 		<dependency org="org.scala-lang" name="scala-reflect" rev="2.10.6" transitive="false" conf="default->master(*),default,compile,runtime(*),runtime,default(compile),compile(*),master" info.apiURL="http://www.scala-lang.org/api/2.10.6/">
 			<artifact name="scala-reflect" type="src" ext="jar" conf="sources" e:classifier="sources"/>
@@ -57,11 +60,14 @@
 		<dependency org="org.scala-sbt" name="compiler-interface" rev="0.13.16" transitive="false" conf="default->compile,default(compile)">
 			<artifact name="compiler-interface" type="src" ext="jar" conf="sources" e:classifier="sources"/>
 		</dependency>
-		<dependency org="org.jetbrains" name="sbt-idea-shell" rev="2017.2" transitive="false" conf="default->compile,default(compile)" scalaVersion="2.10" sbtVersion="0.13">
-			<artifact name="sbt-idea-shell" type="src" ext="jar" conf="sources" e:classifier="sources"/>
-		</dependency>
 		<dependency org="org.scala-sbt" name="tasks" rev="0.13.16" transitive="false" conf="default->compile,default(compile)">
 			<artifact name="tasks" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+		</dependency>
+		<dependency org="org.jetbrains" name="sbt-idea-shell" rev="1.2+7-625c26bc" transitive="false" conf="default->compile,default(compile)" scalaVersion="2.10" sbtVersion="0.13">
+			<artifact name="sbt-idea-shell" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+		</dependency>
+		<dependency org="org.scalaz" name="scalaz-core_2.10" rev="7.2.14" transitive="false" conf="default->default,compile,runtime(*),master(compile),runtime,default(compile),compile(*),master">
+			<artifact name="scalaz-core_2.10" type="src" ext="jar" conf="sources" e:classifier="sources"/>
 		</dependency>
 		<dependency org="org.scala-sbt" name="cross" rev="0.13.16" transitive="false" conf="default->compile,default(compile)">
 			<artifact name="cross" type="src" ext="jar" conf="sources" e:classifier="sources"/>
@@ -102,7 +108,7 @@
 		<dependency org="org.json4s" name="json4s-ast_2.10" rev="3.2.10" transitive="false" conf="default->master(*),compile,runtime(*),runtime,compile(*),master">
 			<artifact name="json4s-ast_2.10" type="src" ext="jar" conf="sources" e:classifier="sources"/>
 		</dependency>
-		<dependency org="org.scala-lang" name="scala-library" rev="2.10.6" transitive="false" conf="default->default,master(*),compile,runtime(*),runtime,default(compile),compile(*),master" info.apiURL="http://www.scala-lang.org/api/2.10.6/">
+		<dependency org="org.scala-lang" name="scala-library" rev="2.10.6" transitive="false" conf="default->default,master(*),compile,runtime(*),master(compile),runtime,default(compile),compile(*),master" info.apiURL="http://www.scala-lang.org/api/2.10.6/">
 			<artifact name="scala-library" type="src" ext="jar" conf="sources" e:classifier="sources"/>
 		</dependency>
 		<dependency org="org.scala-sbt" name="actions" rev="0.13.16" transitive="false" conf="default->compile,default(compile)">
@@ -119,6 +125,9 @@
 		</dependency>
 		<dependency org="org.scala-tools.sbinary" name="sbinary_2.10" rev="0.4.2" transitive="false" conf="default->compile,default(compile)">
 			<artifact name="sbinary_2.10" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+		</dependency>
+		<dependency org="commons-io" name="commons-io" rev="2.4" transitive="false" conf="default->default,compile,runtime(*),master(compile),runtime,default(compile),compile(*),master">
+			<artifact name="commons-io" type="src" ext="jar" conf="sources" e:classifier="sources"/>
 		</dependency>
 		<dependency org="org.scala-sbt" name="testing" rev="0.13.16" transitive="false" conf="default->compile,default(compile)">
 			<artifact name="testing" type="src" ext="jar" conf="sources" e:classifier="sources"/>
@@ -152,6 +161,9 @@
 		</dependency>
 		<dependency org="org.scala-sbt" name="logging" rev="0.13.16" transitive="false" conf="default->compile,default(compile)">
 			<artifact name="logging" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+		</dependency>
+		<dependency org="org.scalaz" name="scalaz-effect_2.10" rev="7.2.14" transitive="false" conf="default->default,compile,runtime,default(compile),master">
+			<artifact name="scalaz-effect_2.10" type="src" ext="jar" conf="sources" e:classifier="sources"/>
 		</dependency>
 		<dependency org="org.scala-sbt" name="test-interface" rev="1.0" transitive="false" conf="default->default,compile,runtime,default(compile),master">
 			<artifact name="test-interface" type="src" ext="jar" conf="sources" e:classifier="sources"/>

@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="sbt: org.neo4j.driver:neo4j-java-driver:1.0.0-M01:jar">
+  <library name="SBT: org.neo4j.driver:neo4j-java-driver:1.0.0-M01:jar">
     <CLASSES>
       <root url="jar://$USER_HOME$/.ivy2/cache/org.neo4j.driver/neo4j-java-driver/jars/neo4j-java-driver-1.0.0-M01.jar!/" />
     </CLASSES>
